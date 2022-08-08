@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<nav class="navbar">
+    <div class="container-fluid border-bottom border-light ms-md-5 me-md-5">
+        <h1 class="display-5 text-light">Budżet osobisty</h1>
+    </div>
+</nav>
+
+<section class="container mt-5 mb-5">
+    <div class="row ">
+        <div class="col-lg-6 col-md-8 col-11 m-auto bg-light p-4">
+            <h2 class="display-6 text-center">Menu</h2>
+            <div class="col text-center fs-5 mt-3">
+                <a href="incomes.php" class="text-decoration-none text-dark">Dodaj przychód</a>
+            </div>
+            <div class="col text-center fs-5 mt-3">
+                <a href="expenses.php" class="text-decoration-none text-dark">Dodaj wydatek</a>
+            </div>
+            <div class="col text-center fs-5 mt-3">
+                <a href="balance.php" class="text-decoration-none text-dark">Przeglądaj bilans</a>
+            </div>
+            <div class="col text-center fs-5 mt-3">
+                <a href="/" class="text-decoration-none text-dark">Ustawienia</a>
+            </div>
+            <div class="col text-center fs-5 mt-3">
+                <a href="/logout" class="text-decoration-none text-dark">Wyloguj się</a>
+            </div> 
+        </div>
+    </div>
+</section>
+
+   
+
+{% endblock %}

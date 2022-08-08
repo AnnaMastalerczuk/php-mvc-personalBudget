@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block footer %}
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+</script>
+
+<script>
+    const inputPassword = document.querySelector('#password');
+    const eyeBtn = document.querySelector('#togglePassword');
+    let flag = true;
+
+    eyeBtn.addEventListener('click', function() {
+
+        if(flag){
+            inputPassword.type = 'text';
+            flag = false;
+        } else {
+            inputPassword.type = 'password';
+            flag = true;
+        }
+        eyeBtn.classList.toggle('bi-eye');
+    });
+</script> -->
+
+{% endblock %}
+
+{% block body %}
+
+<nav class="navbar">
+    <div class="container-fluid border-bottom border-light ms-md-5 me-md-5">
+        <h1 class="display-5 text-light">Budżet osobisty</h1>
+    </div>
+</nav>
+    
+<section class="container mt-5 mb-5">
+    <div class="row ">
+        <div class="col-lg-6 col-md-8 col-11 m-auto bg-light p-4">
+            <h2 class="display-6 text-center">Zarejestruj się</h2>
+            <form action="/signup/create" method="post">
+                <div class="col mt-3">
+                    <label class="form-label" for="login">Podaj login:</label>
+                    <input class="form-control" type="text" placeholder="Login" id="login" name="login" required>
+                </div>
+
+                <div class="col mt-3">
+                    <label class="form-label" for="password">Podaj hasło:</label>
+                    <div class="input-group mb-3">
+                    <input class="form-control" type="password" placeholder="Password" id="password" name="password" required>
+                    <i class="input-group-text bi bi-eye-slash" id="togglePassword"></i>
+                    </div>                        
+                </div>
+
+                <div class="col mt-3">
+                    <label class="form-label" for="email">Podaj mail:</label>
+                    <input class="form-control" type="email" placeholder="E-mail" id="email" name="email" required>
+                </div>
+
+                {% if user.errors is not empty %}
+                <ul>
+                    {% for error in user.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <div class="d-grid gap-2 mt-5">
+                    <button class="btn btn-outline-dark">Zarejestruj się</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    const inputPassword = document.querySelector('#password');
+    const eyeBtn = document.querySelector('#togglePassword');
+    let flag = true;
+
+    eyeBtn.addEventListener('click', function() {
+
+        if(flag){
+            inputPassword.type = 'text';
+            flag = false;
+        } else {
+            inputPassword.type = 'password';
+            flag = true;
+        }
+        eyeBtn.classList.toggle('bi-eye');
+    });
+</script>
+
+{% endblock %}
