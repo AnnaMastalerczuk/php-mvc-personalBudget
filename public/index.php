@@ -31,7 +31,7 @@ $router = new Core\Router();
 
 // Add the routes
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
-$router->add('login', ['controller' => 'Home', 'action' => 'create']);
+$router->add('login', ['controller' => 'Home', 'action' => 'index']);
 $router->add('logout', ['controller' => 'Home', 'action' => 'destroy']);
 $router->add('{controller}/{action}');
     

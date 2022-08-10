@@ -1,0 +1,18 @@
+html{
+    --backgroundColor: #124559;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    width: 100%;
+    min-height: 100%;
+}
+
+button.btn-outline-dark:hover{
+    background-color: var(--backgroundColor);
+    border-color: var(--backgroundColor);
+}
+
+h1{
+    letter-spacing: 0.2em;    
+}
