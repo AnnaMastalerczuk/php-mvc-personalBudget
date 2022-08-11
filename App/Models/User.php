@@ -40,7 +40,6 @@ class User extends \Core\Model
      */
     public function save()
     {
-
         $this->validate();
 
         if (empty($this->errors)) {
@@ -202,6 +201,45 @@ class User extends \Core\Model
         return false;
     }
 
+       /**
+     * Add category
+     *
+     * @return void  
+     */
+    public function addIncomesCategory()
+    {        
+        // $sql = 'INSERT INTO users (username, password, email) VALUES (:username, :password, :email)';
+        $sql = 'INSERT INTO incomes_category_assigned_to_users (user_id, name) SELECT u.id, i.name FROM incomes_category_default AS i, users AS u WHERE u.email = :email';
+        // && ($connection->query("INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT u.id, e.name FROM expenses_category_default AS e, users AS u WHERE u.username = '$login'"))
+        // && ($connection->query("INSERT INTO payment_methods_assigned_to_users (user_id, name) SELECT u.id, p.name FROM payment_methods_default AS p, users AS u WHERE u.username = '$login'")))
+                                              
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);                                                  
+            $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
+            $stmt->execute();           
+    }
+
+    public function addExpensesCategory()
+    {        
+        // $sql = 'INSERT INTO users (username, password, email) VALUES (:username, :password, :email)';
+        $sql = 'INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT u.id, e.name FROM expenses_category_default AS e, users AS u WHERE u.email = :email';
+        // && ($connection->query("INSERT INTO payment_methods_assigned_to_users (user_id, name) SELECT u.id, p.name FROM payment_methods_default AS p, users AS u WHERE u.username = '$login'")))
+                                              
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);                                                  
+            $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
+            $stmt->execute();           
+    }
+
+    public function addPaymentCategory()
+    {      
+        $sql = 'INSERT INTO payment_methods_assigned_to_users (user_id, name) SELECT u.id, p.name FROM payment_methods_default AS p, users AS u WHERE u.email = :email';
+                                              
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);                                                  
+            $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
+            $stmt->execute();           
+    }
  
 
 }

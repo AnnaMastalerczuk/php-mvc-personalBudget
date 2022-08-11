@@ -35,7 +35,10 @@ class Signup extends \Core\Controller
         $user = new User($_POST);
 
         if ($user->save()) {
-
+            
+            $user->addIncomesCategory();
+            $user->addExpensesCategory();
+            $user->addPaymentCategory();
             $this->redirect('/signup/success');
 
         } else {
@@ -57,7 +60,7 @@ class Signup extends \Core\Controller
         // if(!Auth::isLoggedIn()){
         //     $this->redirect('/');
         // }
-        $this->requireLogin();
+        // $this->requireLogin();
         View::renderTemplate('Signup/success.html');
     }
 }
