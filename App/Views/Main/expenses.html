@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Dodaj przychód{% endblock %}
+
+{% block body %}
+
+<nav class="navbar">
+    <div class="container-fluid border-bottom border-light ms-md-5 me-md-5">
+        <h1 class="display-5 text-light">Budżet osobisty</h1>
+        <div class="text-light fs-5"><a class="nav-link text-light" href="/main/menu">Menu</a></div>
+    </div>
+</nav>
+
+<section class="container mt-5 mb-5">
+    <div class="row ">
+        <div class="col-lg-6 col-md-8 col-11 m-auto bg-light p-4">
+            <h2 class="display-6 text-center">Dodaj wydatek</h2>
+            <form action="/Expenses/create" method="post">
+                <div class="col mt-3">
+                    <label class="form-label" for="amount">Podaj kwotę:</label>
+                    <input class="form-control" type="number" placeholder="Kwota" id="amount" min="0" step="0.01" name="amount" required>
+                </div>
+
+                <div class="col mt-3">
+                    <label class="form-label" for="date">Podaj date:</label>
+                    <input class="form-control" type="date" id="date" name="date" required>
+                </div>
+                <div class="col mt-3">
+                    <label class="form-label" for="payment">Wybierz sposób płatności:</label>
+                    <select class="form-select" aria-label="Default select example" name="payment" id="payment">
+                        <option value="Cash">Gotówka</option>
+                        <option value="Debit Card">Karta debetowa</option>
+                        <option value="Credit Card">Karta kredytowa</option>
+                    </select>
+                </div>
+                <div class="col mt-3">
+                    <label class="form-label" for="category">Wybierz kategorię:</label>
+                    <select class="form-select" aria-label="Default select example" name="category" id="category">
+                        <option value="Transport">Transport</option>
+                        <option value="Books">Książki</option>
+                        <option value="Food">Jedzenie</option>
+                        <option value="Apartments">Mieszkanie</option>                            
+                        <option value="Telecommunication">Telekomunikacja</option>
+                        <option value="Health">Opieka zdrowotna</option>
+                        <option value="Clothes">Ubranie</option>
+                        <option value="Hygiene">Higienia</option>
+                        <option value="Kids">Dzieci</option>
+                        <option value="Recreation">Rozrywka</option>
+                        <option value="Trip">Wycieczka</option>                                                
+                        <option value="Savings">Oszczędności</option>
+                        <option value="For Retirement">Emerytura</option>
+                        <option value="Debt Repayment">Spłata długów</option>
+                        <option value="Gift">Darowizna</option>
+                        <option value="Another">Inne wydatki</option>
+                    </select>
+                </div>
+                <div class="col mt-3">
+                    <label class="form-label" for="comment">Komentarz:</label>
+                    <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
+                </div>
+
+                {% if expense.errors is not empty %}
+                <ul>
+                    {% for error in expense.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <div class="d-grid gap-2 mt-5">
+                    <button class="btn btn-outline-dark">Dodaj</button>
+                    <button type="button" class="btn btn-outline-dark" id="btnCancel">Anuluj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    const btnCancel = document.querySelector('#btnCancel');
+    const textA = document.querySelector('#comment');
+    const inputs = document.querySelectorAll('input');
+    const inputData = document.querySelector('#date');
+    
+    function leadingZero(i) {
+        return (i < 10)? "0"+i : i;
+    }
+    
+    let nowData = new Date();
+    let year = nowData.getFullYear();
+    let month = leadingZero(nowData.getMonth()+1);
+    let day = leadingZero(nowData.getDate());
+    
+    inputData.value = `${year}-${month}-${day}`;
+    
+    btnCancel.addEventListener('click', function() {
+        
+        inputs.forEach(input => {
+        input.value = "";
+        });
+        inputData.value = `${year}-${month}-${day}`;
+        textA.value = "";
+    });
+    
+        </script>
+
+{% endblock %}

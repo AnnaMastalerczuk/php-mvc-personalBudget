@@ -5,7 +5,7 @@
 {% block body %}
 <nav class="navbar">
     <div class="container-fluid border-bottom border-light ms-md-5 me-md-5">
-        <h1 class="display-5 text-light">Budżet osobisty - witaj {{user.username}}</h1>
+        <h1 class="display-5 text-light">Budżet osobisty - witaj {{current_user.username}}</h1>
     </div>
 </nav>
 
@@ -13,11 +13,12 @@
     <div class="row ">
         <div class="col-lg-6 col-md-8 col-11 m-auto bg-light p-4">
             <h2 class="display-6 text-center">Menu</h2>
+            <div class="col text-center fs-5 mt-3">{{info}}</div>
             <div class="col text-center fs-5 mt-3">
-                <a href="incomes.php" class="text-decoration-none text-dark">Dodaj przychód</a>
+                <a href="/main/incomes" class="text-decoration-none text-dark">Dodaj przychód</a>
             </div>
             <div class="col text-center fs-5 mt-3">
-                <a href="expenses.php" class="text-decoration-none text-dark">Dodaj wydatek</a>
+                <a href="/main/expenses" class="text-decoration-none text-dark">Dodaj wydatek</a>
             </div>
             <div class="col text-center fs-5 mt-3">
                 <a href="balance.php" class="text-decoration-none text-dark">Przeglądaj bilans</a>

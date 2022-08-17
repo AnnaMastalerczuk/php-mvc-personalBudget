@@ -12,6 +12,7 @@ use \App\Auth;
  */
 class Main extends Authenticated
 {
+
     /**
      * Show the index page
      *
@@ -19,16 +20,29 @@ class Main extends Authenticated
      */
     public function menuAction()
     {
-        // if(!Auth::isLoggedIn()){
-        //     Auth::rememberRequestedPage();
-
-        //     $this->redirect('/');
-        // }
-
-        // $this->requireLogin();
         View::renderTemplate('Main/menu.html', [
             'user' => Auth::getUser()
         ]);
+    }
+
+        /**
+     * Show the incomes page
+     *
+     * @return void
+     */
+    public function incomesAction()
+    {
+        View::renderTemplate('Main/incomes.html');
+    }
+
+            /**
+     * Show the expenses page
+     *
+     * @return void
+     */
+    public function expensesAction()
+    {
+        View::renderTemplate('Main/expenses.html');
     }
 }
 

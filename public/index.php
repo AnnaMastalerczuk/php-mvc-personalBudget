@@ -33,6 +33,7 @@ $router = new Core\Router();
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
 $router->add('login', ['controller' => 'Home', 'action' => 'index']);
 $router->add('logout', ['controller' => 'Home', 'action' => 'destroy']);
+$router->add('menu', ['controller' => 'Main', 'action' => 'menu']);
 $router->add('{controller}/{action}');
     
 $router->dispatch($_SERVER['QUERY_STRING']);
