@@ -46,24 +46,13 @@ class Balance extends \Core\Model
             $stmt = $db->prepare($sql);
 
             $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
-            // $stmt->bindValue(':userId', $id, PDO::PARAM_INT);
             $stmt->bindValue(':startDate', $startDate, PDO::PARAM_STR);
             $stmt->bindValue(':endDate', $endDate, PDO::PARAM_STR);           
             $stmt->execute();
 
             $incomes = $stmt->fetchAll();
-            // print_r($row);
-            // $number = 0;
 
-            // foreach($incomes as $income){
-            //     echo $income['0'];
-            //     echo $income['1'];
-            //     echo $income['2'];
-
-            // }
-            return $this->changeNameIncome($incomes);
-            // return $incomes;       
-            
+            return $this->changeNameIncome($incomes);            
         }
 
         return false;  
@@ -81,23 +70,12 @@ class Balance extends \Core\Model
             $stmt = $db->prepare($sql);
 
             $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
-            // $stmt->bindValue(':userId', $id, PDO::PARAM_INT);
             $stmt->bindValue(':startDate', $startDate, PDO::PARAM_STR);
             $stmt->bindValue(':endDate', $endDate, PDO::PARAM_STR);           
             $stmt->execute();
 
             $expenses = $stmt->fetchAll();
-            // print_r($row);
-            // $number = 0;
-
-            // foreach($incomes as $income){
-            //     echo $income['0'];
-            //     echo $income['1'];
-            //     echo $income['2'];
-
-            // }
-            return $expenses;
-            // return $incomes;            
+            return $this->changeNameExpense($expenses);          
         }
 
         return false;  
@@ -183,10 +161,9 @@ class Balance extends \Core\Model
 
     public function changeNameIncome($incomes)
     {
-        $incomesNew = $incomes;
-        foreach($incomesNew as $income)
-        {
-            $categoryName = $income[0];
+        foreach ($incomes as $key => $item) {
+
+            $categoryName = $item["name"];
             switch($categoryName)
             {
                 case "Salary": $categoryName = "Wypłata";
@@ -198,13 +175,80 @@ class Balance extends \Core\Model
                 case "Another": $categoryName = "Inne";
                 break;
             }
-            $income[0] = $categoryName;
-            // echo $categoryName;
-            // echo $income[0];
-        }    
 
-    return $incomesNew;
+            $item["name"] = $categoryName;
+            $item["0"] = $categoryName;
+            $incomes[$key] = $item;
+        }
 
+        // print_r($incomes);
+
+    return $incomes;
     }
+
+    public function changeNameExpense($expenses)
+    {
+        foreach ($expenses as $key => $item) {
+
+            $categoryName = $item["0"];
+            $categoryPay = $item["3"];
+            switch($categoryName)
+            {
+                case "Transport": $categoryName = "Transport";
+                break;
+                case "Books": $categoryName = "Książki";
+                break;
+                case "Food": $categoryName = "Jedzenie";
+                break;
+                case "Apartments": $categoryName = "Mieszkanie";
+                break;
+                case "Telecommunication": $categoryName = "Telekomunikacja";
+                break;
+                case "Health": $categoryName = "Opieka zdrowotna";
+                break;
+                case "Clothes": $categoryName = "Ubrania";
+                break;
+                case "Hygiene": $categoryName = "Higiena";
+                break;
+                case "Kids": $categoryName = "Dzieci";
+                break;
+                case "Recreation": $categoryName = "Rozrywka";
+                break;
+                case "Trip": $categoryName = "Wycieczka";
+                break;
+                case "Savings": $categoryName = "Oszczedności";
+                break;
+                case "For Retirement": $categoryName = "Emerytura";
+                break;
+                case "Debt Repayment": $categoryName = "Spłata długów";
+                break;
+                case "Gift": $categoryName = "Darowizna";
+                break;
+                case "Another": $categoryName = "Inne";
+                break;
+            }
+
+            switch($categoryPay)
+            {
+                case "Cash": $categoryPay = "Gotówka";
+                break;
+                case "Debit Card": $categoryPay = "Karta debetowa";
+                break;
+                case "Credit Card": $categoryPay = "Karta kredytowa";
+                break;
+            }
+
+            // $item["name"] = $categoryName;
+            $item["0"] = $categoryName;
+            $item["3"] = $categoryPay;
+            $expenses[$key] = $item;
+        }
+
+        // print_r($expenses);
+
+    return $expenses;
+    }
+
+       
 
 }
