@@ -44,5 +44,17 @@ class Main extends Authenticated
     {
         View::renderTemplate('Main/expenses.html');
     }
+
+                /**
+     * Show the expenses page
+     *
+     * @return void
+     */
+    public function balanceAction()
+    {
+        View::renderTemplate('Main/balance.html');
+    }
+
+
 }
 
