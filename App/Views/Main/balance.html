@@ -50,7 +50,22 @@
         <div class="container">
             <div class="row">
                 <div class="text-light mt-2 mb-2">
+                    <h2 class="display-6">{{ dateError }}</h2>
+                </div>
+                <div class="text-light mt-2 mb-2">
+                    {% if dates[0] is defined %}
                     <h2 class="display-6">Bilans od {{ dates[0] }} do {{ dates[1] }}</h2>
+                    {% endif %}
+
+                    {% if incomesBalance is not empty %}
+                    {% if incomesSum >= expensesSum %}
+                        <p class="statement fs-5">Gratulacje. Świetnie zarządzasz finansami!</p>
+                    {% endif %}
+                    {% if incomesSum < expensesSum %}
+                    <p class="statement fs-5">Uważaj, wpadasz w długi!</p>
+                    {% endif %}
+                {% endif %}
+
                 </div>
                 <div class="col-md-6 bg-light mb-3">
                     <h2 class="display-6">Bilans przychodów</h2>
@@ -80,6 +95,13 @@
                             </tr>
                         </tfoot>
                     </table>
+                </div>
+
+                <div class="col-md-6 diagram bg-light mb-3">
+                    <h2 class="display-6">Diagram przychodów</h2>
+                    <div class="piechart m-3">
+                        <canvas id="myChartIn"></canvas>
+                    </div>
                 </div>
 
                 <div class="col-md-6 bg-light mb-3">
@@ -112,94 +134,109 @@
                             </tr>
                         </tfoot>
                     </table>
-                </div>
-
-                <!-- {{ 'assasas' }}
-{% for income in incomesBalance %}
-{{ income[0] }}
-{{ income[1] }}
-{{ income[2] }}
-{% endfor %} -->
             </div>
+            <div class="col-md-6 diagram bg-light mb-3">
+                <h2 class="display-6">Diagram przychodów</h2>
+                <div class="piechart m-3">
+                    <canvas id="myChartEx"></canvas>
+                </div>
+            </div>            
         </div>
+
     </section>
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- <script>
-const nameArrayIn = <?php echo json_encode($nameArrayIncomes); ?>;
-const sumArrayIn = <?php echo json_encode($sumArrayIncomes); ?>;
+    <script>
 
-const dataIn = {
-  labels: nameArrayIn,
-  datasets: [{
-    label: 'Diagram przychodów',
-    data: sumArrayIn,
-    backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(154, 205, 50)',
-        'rgb(255, 205, 86)',
-        'rgb(75, 192, 192)' 
-    ],
-    hoverOffset: 4
-  }]
-};
+const arrayInALL = JSON.parse('{{ incomesChart|json_encode|raw }}');
+const nameArrayIn = arrayInALL.map(function (nameIn){
+    return nameIn[0];
+})
 
-  const configIn = {
-    type: 'pie',
-    data: dataIn,
-  };
+const sumArrayIn = arrayInALL.map(function (sumIn){
+    return sumIn[1];
+})
 
-  const myChartIn = new Chart(
-    document.getElementById('myChartIn'),
-    configIn
-  );
-
-</script>
+    const dataIn = {
+      labels: nameArrayIn,
+      datasets: [{
+        label: 'Diagram przychodów',
+        data: sumArrayIn,
+        backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(154, 205, 50)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)' 
+        ],
+        hoverOffset: 4
+      }]
+    };
+    
+      const configIn = {
+        type: 'pie',
+        data: dataIn,
+      };
+    
+      const myChartIn = new Chart(
+        document.getElementById('myChartIn'),
+        configIn
+      );
+    
+    </script>
 
 <script>
-const nameArrayEx = <?php echo json_encode($nameArrayExpenses); ?>;
-const sumArrayEx = <?php echo json_encode($sumArrayExpenses); ?>;
 
-const dataEx = {
-  labels: nameArrayEx,
-  datasets: [{
-    label: 'Diagram wydatków',
-    data: sumArrayEx,
-    backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(255, 159, 64)',
-        'rgb(255, 205, 86)',
-        'rgb(75, 192, 192)',
-        'rgb(54, 162, 235)',
-        'rgb(153, 102, 255)',
-        'rgb(201, 203, 207)',
-        'rgb(154, 205, 50)',
-        'rgb(107, 142, 35)',
-        'rgb(47 79 79)',
-        'rgb(	112 128 144)',
-        'rgb(192 192 192)',
-        'rgb(165 42 42)',
-        'rgb(160 82 45)',
-        'rgb(65 105 225)',
-        'rgb(100 149 237)'
-    ],
-    hoverOffset: 4
-  }]
-};
+const arrayExALL = JSON.parse('{{ expensesChart|json_encode|raw }}');
+const nameArrayEx = arrayExALL.map(function (nameEx){
+    return nameEx[0];
+})
 
-  const configEx = {
-    type: 'pie',
-    data: dataEx,
-  };
+const sumArrayEx = arrayExALL.map(function (sumEx){
+    return sumEx[1];
+})
+    
+    const dataEx = {
+      labels: nameArrayEx,
+      datasets: [{
+        label: 'Diagram wydatków',
+        data: sumArrayEx,
+        backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)',
+            'rgb(154, 205, 50)',
+            'rgb(107, 142, 35)',
+            'rgb(47 79 79)',
+            'rgb(	112 128 144)',
+            'rgb(192 192 192)',
+            'rgb(165 42 42)',
+            'rgb(160 82 45)',
+            'rgb(65 105 225)',
+            'rgb(100 149 237)'
+        ],
+        hoverOffset: 4
+      }]
+    };
+    
+      const configEx = {
+        type: 'pie',
+        data: dataEx,
+      };
+    
+      const myChartEx = new Chart(
+        document.getElementById('myChartEx'),
+        configEx
+      );
+    
+    </script>
 
-  const myChartEx = new Chart(
-    document.getElementById('myChartEx'),
-    configEx
-  );
 
-</script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">

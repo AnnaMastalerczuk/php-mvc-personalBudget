@@ -58,6 +58,55 @@ class Balance extends \Core\Model
         return false;  
     }
 
+    public function incomesToChart()
+    {
+        if($this->showBalanceIncomes())
+        {
+            $dates = $this->checkDate();
+            $startDate = $dates[0];
+            $endDate = $dates[1];
+            $sql = 'SELECT ind.name, SUM(inc.amount) AS sum FROM incomes inc, incomes_category_assigned_to_users ind WHERE inc.user_id=:userId AND inc.date_of_income>=:startDate AND inc.date_of_income<=:endDate AND inc.user_id=ind.user_id AND inc.income_category_assigned_to_user_id = ind.id GROUP BY ind.id';
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);
+
+            $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+            $stmt->bindValue(':startDate', $startDate, PDO::PARAM_STR);
+            $stmt->bindValue(':endDate', $endDate, PDO::PARAM_STR);           
+            $stmt->execute();
+
+            $incomes = $stmt->fetchAll();
+
+            $incomes = $this->changeNameIncome($incomes);
+// print_r($incomes);
+            return $incomes;
+        }
+        return false;
+    }
+
+    public function expensesToChart()
+    {
+        if($this->showBalanceExpenses())
+        {
+            $dates = $this->checkDate();
+            $startDate = $dates[0];
+            $endDate = $dates[1];
+            $sql = 'SELECT exd.name, SUM(ex.amount) AS sum FROM expenses ex, expenses_category_assigned_to_users exd WHERE ex.user_id=:userId AND ex.date_of_expense>=:startDate AND ex.date_of_expense<=:endDate AND ex.user_id=exd.user_id AND ex.expense_category_assigned_to_user_id = exd.id GROUP BY exd.id';
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);
+
+            $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+            $stmt->bindValue(':startDate', $startDate, PDO::PARAM_STR);
+            $stmt->bindValue(':endDate', $endDate, PDO::PARAM_STR);           
+            $stmt->execute();
+
+            $expenses = $stmt->fetchAll();
+            $expenses = $this->changeNameExpense($expenses);
+
+            return $expenses;
+        }
+        return false;
+    }
+
     public function showBalanceExpenses()
     {
         if($this->checkDate())
@@ -75,7 +124,10 @@ class Balance extends \Core\Model
             $stmt->execute();
 
             $expenses = $stmt->fetchAll();
-            return $this->changeNameExpense($expenses);          
+            $expenses = $this->changeNameExpense($expenses);    
+            $expenses = $this->changeNamePayment($expenses);
+
+            return $expenses;
         }
 
         return false;  
@@ -131,7 +183,7 @@ class Balance extends \Core\Model
         $dates = [$startDate, $endDate];
 
         return $dates;
-    }
+    }    
 
 
             /**
@@ -191,7 +243,6 @@ class Balance extends \Core\Model
         foreach ($expenses as $key => $item) {
 
             $categoryName = $item["0"];
-            $categoryPay = $item["3"];
             switch($categoryName)
             {
                 case "Transport": $categoryName = "Transport";
@@ -227,7 +278,22 @@ class Balance extends \Core\Model
                 case "Another": $categoryName = "Inne";
                 break;
             }
+            // $item["name"] = $categoryName;
+            $item["0"] = $categoryName;
+            $expenses[$key] = $item;
+        }
 
+        // print_r($expenses);
+
+    return $expenses;
+    }
+
+    public function changeNamePayment($expenses)
+    {
+        foreach ($expenses as $key => $item) {
+
+            $categoryPay = $item["3"];
+        
             switch($categoryPay)
             {
                 case "Cash": $categoryPay = "Gotówka";
@@ -238,17 +304,10 @@ class Balance extends \Core\Model
                 break;
             }
 
-            // $item["name"] = $categoryName;
-            $item["0"] = $categoryName;
             $item["3"] = $categoryPay;
             $expenses[$key] = $item;
         }
-
-        // print_r($expenses);
-
     return $expenses;
-    }
-
-       
+    }       
 
 }

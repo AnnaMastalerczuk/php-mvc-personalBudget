@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use \Core\View;
 use \App\Auth;
+use \App\Models\Balance;
+use \App\Controllers\BalanceMenager;
 
 /**
  * Home controller
@@ -52,9 +54,11 @@ class Main extends Authenticated
      */
     public function balanceAction()
     {
-        View::renderTemplate('Main/balance.html');
-    }
-
+        // View::renderTemplate('Main/balance.html'); 
+        $dateObject = (object) array('dataChoice' => "Bieżący miesiąc");
+        $balance = new Balance($dateObject);
+        BalanceMenager::showBalanceAction($balance);
+    }   
 
 }
 
