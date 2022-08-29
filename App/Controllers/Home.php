@@ -37,11 +37,9 @@ class Home extends \Core\Controller
         if ($user) {
 
             Auth::login($user);
-            $this->redirect('/main/menu');  
-            // $this->redirect(Auth::getReturnToPage());
+            View::renderTemplate('Main/menu.html');
 
         } else {
-
             View::renderTemplate('Home/index.html', [
                 'email' => $_POST['email'],
                 'error' => 'Niepoprawny login lub hasło',
