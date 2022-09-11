@@ -40,6 +40,7 @@ class BalanceMenager extends Authenticated
         $dates = $balance->checkDate();
         $incomesSummary = $balance->summary($incomesBalance);
         $expensesSummary = $balance->summary($expensesBalance);
+        $difference =  $balance->difference($incomesSummary, $expensesSummary);
         $incomesChart = $balance->incomesToChart();
         $expensesChart = $balance->expensesToChart();
 
@@ -49,6 +50,7 @@ class BalanceMenager extends Authenticated
         'dates' => $dates,
         'incomesSum' => $incomesSummary,
         'expensesSum' => $expensesSummary,
+        'diff' => $difference,
         'incomesChart' => $incomesChart,
         'expensesChart' => $expensesChart,
     ]);

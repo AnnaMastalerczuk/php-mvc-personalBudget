@@ -11,29 +11,8 @@ use \Core\View;
  * PHP version 7.0
  */
 class Incomes extends Authenticated
-{
-    
-    // /**
-    //  * Show the index page
-    //  *
-    //  * @return void
-    //  */
-    // public function indexAction()
-    // {
-    //     View::renderTemplate('Home/index.html');
-    // }
-
-    //         /**
-    //  * Show the incomes page
-    //  *
-    //  * @return void
-    //  */
-    // public function incomesAction()
-    // {
-    //     View::renderTemplate('Main/incomes.html');
-    // }
-
-        /**
+{    
+       /**
      * Income add
      * 
      * @return void
@@ -44,8 +23,6 @@ class Incomes extends Authenticated
         $income = new Income($_POST);
 
         if ($income->save()) {
-        //    $this->redirect('/main/menu');
-
            View::renderTemplate('Main/menu.html', [
             'info' => '(Przychód dodany pomyślnie)',
         ]);
@@ -54,8 +31,6 @@ class Incomes extends Authenticated
             View::renderTemplate('Main/incomes.html', [
                 'income' => $income,
             ]);
-        }
-
-  
+        }  
     }
 }

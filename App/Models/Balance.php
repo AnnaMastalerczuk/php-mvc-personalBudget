@@ -41,7 +41,9 @@ class Balance extends \Core\Model
             $dates = $this->checkDate();
             $startDate = $dates[0];
             $endDate = $dates[1];
-            $sql = 'SELECT ind.name, inc.amount, inc.date_of_income, inc.income_comment FROM incomes inc, incomes_category_assigned_to_users ind WHERE inc.user_id=:userId AND inc.date_of_income>=:startDate AND inc.date_of_income<=:endDate AND inc.user_id=ind.user_id AND inc.income_category_assigned_to_user_id = ind.id';
+            $sql = 'SELECT ind.name, inc.amount, inc.date_of_income, inc.income_comment 
+            FROM incomes inc, incomes_category_assigned_to_users ind 
+            WHERE inc.user_id=:userId AND inc.date_of_income>=:startDate AND inc.date_of_income<=:endDate AND inc.user_id=ind.user_id AND inc.income_category_assigned_to_user_id = ind.id';
             $db = static::getDB();
             $stmt = $db->prepare($sql);
 
@@ -65,7 +67,9 @@ class Balance extends \Core\Model
             $dates = $this->checkDate();
             $startDate = $dates[0];
             $endDate = $dates[1];
-            $sql = 'SELECT ind.name, SUM(inc.amount) AS sum FROM incomes inc, incomes_category_assigned_to_users ind WHERE inc.user_id=:userId AND inc.date_of_income>=:startDate AND inc.date_of_income<=:endDate AND inc.user_id=ind.user_id AND inc.income_category_assigned_to_user_id = ind.id GROUP BY ind.id';
+            $sql = 'SELECT ind.name, SUM(inc.amount) AS sum 
+            FROM incomes inc, incomes_category_assigned_to_users ind 
+            WHERE inc.user_id=:userId AND inc.date_of_income>=:startDate AND inc.date_of_income<=:endDate AND inc.user_id=ind.user_id AND inc.income_category_assigned_to_user_id = ind.id GROUP BY ind.id';
             $db = static::getDB();
             $stmt = $db->prepare($sql);
 
@@ -77,7 +81,7 @@ class Balance extends \Core\Model
             $incomes = $stmt->fetchAll();
 
             $incomes = $this->changeNameIncome($incomes);
-// print_r($incomes);
+
             return $incomes;
         }
         return false;
@@ -90,7 +94,9 @@ class Balance extends \Core\Model
             $dates = $this->checkDate();
             $startDate = $dates[0];
             $endDate = $dates[1];
-            $sql = 'SELECT exd.name, SUM(ex.amount) AS sum FROM expenses ex, expenses_category_assigned_to_users exd WHERE ex.user_id=:userId AND ex.date_of_expense>=:startDate AND ex.date_of_expense<=:endDate AND ex.user_id=exd.user_id AND ex.expense_category_assigned_to_user_id = exd.id GROUP BY exd.id';
+            $sql = 'SELECT exd.name, SUM(ex.amount) AS sum 
+            FROM expenses ex, expenses_category_assigned_to_users exd 
+            WHERE ex.user_id=:userId AND ex.date_of_expense>=:startDate AND ex.date_of_expense<=:endDate AND ex.user_id=exd.user_id AND ex.expense_category_assigned_to_user_id = exd.id GROUP BY exd.id';
             $db = static::getDB();
             $stmt = $db->prepare($sql);
 
@@ -114,7 +120,9 @@ class Balance extends \Core\Model
             $dates = $this->checkDate();
             $startDate = $dates[0];
             $endDate = $dates[1];
-            $sql = 'SELECT exd.name, ex.amount, ex.date_of_expense, pay.name, ex.expense_comment FROM expenses ex, expenses_category_assigned_to_users exd, payment_methods_assigned_to_users pay WHERE ex.user_id=:userId AND ex.date_of_expense>=:startDate AND ex.date_of_expense<=:endDate AND ex.user_id=exd.user_id AND ex.user_id=pay.user_id AND ex.payment_method_assigned_to_user_id = pay.id AND ex.expense_category_assigned_to_user_id = exd.id';
+            $sql = 'SELECT exd.name, ex.amount, ex.date_of_expense, pay.name, ex.expense_comment 
+            FROM expenses ex, expenses_category_assigned_to_users exd, payment_methods_assigned_to_users pay 
+            WHERE ex.user_id=:userId AND ex.date_of_expense>=:startDate AND ex.date_of_expense<=:endDate AND ex.user_id=exd.user_id AND ex.user_id=pay.user_id AND ex.payment_method_assigned_to_user_id = pay.id AND ex.expense_category_assigned_to_user_id = exd.id';
             $db = static::getDB();
             $stmt = $db->prepare($sql);
 
@@ -186,7 +194,7 @@ class Balance extends \Core\Model
     }    
 
 
-            /**
+    /**
      * Summary
      *
      * @return []  
@@ -201,11 +209,23 @@ class Balance extends \Core\Model
             $sum += $oneFlow;            
         }
 
+        $sum = sprintf("%01.2f", $sum);
         return $sum;
     }
 
+    /**
+     * Difference
+     *
+     * @return int  
+     */
+    public function difference($incomesSummary, $expensesSummary)
+    {
+        $difference = $incomesSummary - $expensesSummary;
+        $difference = sprintf("%01.2f", $difference);
+        return $difference;
+    }
 
-                /**
+    /**
      * Change name
      *
      * @return []  
@@ -232,8 +252,6 @@ class Balance extends \Core\Model
             $item["0"] = $categoryName;
             $incomes[$key] = $item;
         }
-
-        // print_r($incomes);
 
     return $incomes;
     }
@@ -278,12 +296,9 @@ class Balance extends \Core\Model
                 case "Another": $categoryName = "Inne";
                 break;
             }
-            // $item["name"] = $categoryName;
             $item["0"] = $categoryName;
             $expenses[$key] = $item;
         }
-
-        // print_r($expenses);
 
     return $expenses;
     }

@@ -57,14 +57,17 @@
                     <h2 class="display-6">Bilans od {{ dates[0] }} do {{ dates[1] }}</h2>
                     {% endif %}
 
-                    {% if incomesBalance is not empty %}
-                    {% if incomesSum >= expensesSum %}
-                        <p class="statement fs-5">Gratulacje. Świetnie zarządzasz finansami!</p>
+                    {% if (incomesBalance is not empty) or (expensesBalance is not empty) %}
+                        <p class="statement fs-4">Suma przychodów: {{incomesSum}} zł</p>
+                        <p class="statement fs-4">Suma wydatków: {{expensesSum}} zł</p>
+                        <p class="statement fs-4">Rożnica: {{diff}} zł</p>
+                        {% if incomesSum >= expensesSum %}
+                            <p class="statement fs-4">Gratulacje. Świetnie zarządzasz finansami!</p>
+                        {% endif %}
+                        {% if incomesSum < expensesSum %}
+                            <p class="statement fs-4">Uważaj, wpadasz w długi!</p>
+                        {% endif %}                                                
                     {% endif %}
-                    {% if incomesSum < expensesSum %}
-                    <p class="statement fs-5">Uważaj, wpadasz w długi!</p>
-                    {% endif %}
-                {% endif %}
 
                 </div>
                 <div class="col-md-6 bg-light mb-3">
@@ -100,7 +103,7 @@
                 <div class="col-md-6 diagram bg-light mb-3">
                     <h2 class="display-6">Diagram przychodów</h2>
                     <div class="piechart m-3">
-                        <canvas id="myChartIn"></canvas>
+                        <canvas id="myChartIn" style="max-height:400px; max-width:400px; margin-left: auto; margin-right: auto"></canvas>
                     </div>
                 </div>
 
@@ -136,9 +139,9 @@
                     </table>
             </div>
             <div class="col-md-6 diagram bg-light mb-3">
-                <h2 class="display-6">Diagram przychodów</h2>
+                <h2 class="display-6">Diagram wydatków</h2>
                 <div class="piechart m-3">
-                    <canvas id="myChartEx"></canvas>
+                    <canvas id="myChartEx" style="max-height:400px; max-width:400px; margin-left: auto; margin-right: auto"></canvas>
                 </div>
             </div>            
         </div>
@@ -148,7 +151,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script>
+<script>
 
 const arrayInALL = JSON.parse('{{ incomesChart|json_encode|raw }}');
 const nameArrayIn = arrayInALL.map(function (nameIn){

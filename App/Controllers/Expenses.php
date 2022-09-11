@@ -11,28 +11,7 @@ use \Core\View;
  * PHP version 7.0
  */
 class Expenses extends Authenticated
-{
-    
-    // /**
-    //  * Show the index page
-    //  *
-    //  * @return void
-    //  */
-    // public function indexAction()
-    // {
-    //     View::renderTemplate('Home/index.html');
-    // }
-
-    //         /**
-    //  * Show the incomes page
-    //  *
-    //  * @return void
-    //  */
-    // public function incomesAction()
-    // {
-    //     View::renderTemplate('Main/incomes.html');
-    // }
-
+{    
         /**
      * Expense add
      * 
@@ -44,8 +23,6 @@ class Expenses extends Authenticated
         $expense = new Expense($_POST);
 
         if ($expense->save()) {
-        //    $this->redirect('/main/menu');
-
            View::renderTemplate('Main/menu.html', [
             'info' => '(Wydatek dodany pomyślnie)',
         ]);
@@ -54,8 +31,6 @@ class Expenses extends Authenticated
             View::renderTemplate('Main/expenses.html', [
                 'expense' => $expense,
             ]);
-        }
-
-  
+        }  
     }
 }
