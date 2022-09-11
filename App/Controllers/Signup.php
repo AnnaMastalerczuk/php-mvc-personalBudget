@@ -57,10 +57,6 @@ class Signup extends \Core\Controller
      */
     public function successAction()
     {
-        // if(!Auth::isLoggedIn()){
-        //     $this->redirect('/');
-        // }
-        // $this->requireLogin();
         View::renderTemplate('Signup/success.html');
     }
 }

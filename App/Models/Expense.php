@@ -48,12 +48,8 @@ class Expense extends \Core\Model
         $stmt->bindValue(':selectCategory', $this->category, PDO::PARAM_STR);
         $stmt->execute();
 
-        // echo $_SESSION['user_id'];
-        // echo $this->flexRadioDefault;
-
         $expenseArray = $stmt->fetch();
         $expenseCategoryId = $expenseArray['id'];
-        // echo $incomeCategoryId;
 
         return $expenseCategoryId;
     }
@@ -73,12 +69,8 @@ class Expense extends \Core\Model
         $stmt->bindValue(':selectPayment', $this->payment, PDO::PARAM_STR);
         $stmt->execute();
 
-        // echo $_SESSION['user_id'];
-        // echo $this->flexRadioDefault;
-
         $expenseArray = $stmt->fetch();
         $expenseCategoryId = $expenseArray['id'];
-        // echo $incomeCategoryId;
 
         return $expenseCategoryId;
     }
@@ -125,6 +117,11 @@ class Expense extends \Core\Model
         if ((strlen($this->comment) > 1000))
         {
             $this->errors[] = "Komentarz może zawierać do 1000 znaków";
+        }
+
+        if (ctype_alnum($this->comment) == false)
+        {
+            $this->errors[] = "Komentarz może składać się tylko z liter i cyfr (bez polskich znaków)";
         }
 
         if ($this->amount > 1000000) 

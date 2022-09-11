@@ -57,6 +57,4 @@ class Home extends \Core\Controller
         Auth::logout();
         $this->redirect('/');
     }
-
-
 }
