@@ -96,7 +96,7 @@ class Income extends \Core\Model
             $this->errors[] = "Komentarz może zawierać do 1000 znaków";
         }
 
-        if (ctype_alnum($this->comment) == false)
+        if (ctype_alnum($this->comment) == false && $this->comment != "" )
         {
             $this->errors[] = "Komentarz może składać się tylko z liter i cyfr (bez polskich znaków)";
         }

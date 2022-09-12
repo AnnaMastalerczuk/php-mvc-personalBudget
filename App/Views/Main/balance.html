@@ -105,6 +105,7 @@
                     <div class="piechart m-3">
                         <canvas id="myChartIn" style="max-height:400px; max-width:400px; margin-left: auto; margin-right: auto"></canvas>
                     </div>
+                
                 </div>
 
                 <div class="col-md-6 bg-light mb-3">
@@ -154,6 +155,9 @@
 <script>
 
 const arrayInALL = JSON.parse('{{ incomesChart|json_encode|raw }}');
+
+if (arrayInALL)
+{
 const nameArrayIn = arrayInALL.map(function (nameIn){
     return nameIn[0];
 })
@@ -186,12 +190,16 @@ const sumArrayIn = arrayInALL.map(function (sumIn){
         document.getElementById('myChartIn'),
         configIn
       );
+    }
     
     </script>
 
 <script>
 
 const arrayExALL = JSON.parse('{{ expensesChart|json_encode|raw }}');
+
+if(arrayExALL)
+{
 const nameArrayEx = arrayExALL.map(function (nameEx){
     return nameEx[0];
 })
@@ -236,6 +244,7 @@ const sumArrayEx = arrayExALL.map(function (sumEx){
         document.getElementById('myChartEx'),
         configEx
       );
+    }
     
     </script>
 
