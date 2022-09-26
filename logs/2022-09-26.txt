@@ -1,0 +1,4 @@
+[26-Sep-2022 18:50:49 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(47): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
