@@ -35,5 +35,13 @@ $router->add('login', ['controller' => 'Home', 'action' => 'index']);
 $router->add('logout', ['controller' => 'Home', 'action' => 'destroy']);
 $router->add('menu', ['controller' => 'Main', 'action' => 'menu']);
 $router->add('{controller}/{action}');
+
+// $router->add('/expenses', ['controller' => 'Expenses', 'action' => 'expenses']);
+
+/////////////////////////////////////////////
+$router->add('{controller}/{action}');
+$router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
+$router->add('{controller}/{id:\d+}/{action}');
+/////////////////////////////////////////////////////////
     
 $router->dispatch($_SERVER['QUERY_STRING']);

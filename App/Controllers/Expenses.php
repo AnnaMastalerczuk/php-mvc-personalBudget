@@ -33,4 +33,19 @@ class Expenses extends Authenticated
             ]);
         }  
     }
+
+    //////////////////////////////////////////////// test //////////////////////////////////////////////////////////
+
+    public function getExpensesCategoryAction()
+    {
+
+        // echo json_encode(Expense::getCategory(), JSON_UNESCAPED_UNICODE);
+        // echo json_encode("aasas");
+        $expense = new Expense($_POST);
+        $date = $expense->getCategory();
+        echo json_encode($date);
+
+        // return $date;
+    }
+
 }
