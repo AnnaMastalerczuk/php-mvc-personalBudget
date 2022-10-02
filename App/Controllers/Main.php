@@ -5,6 +5,7 @@ namespace App\Controllers;
 use \Core\View;
 use \App\Auth;
 use \App\Models\Balance;
+use \App\Models\Expense;
 use \App\Controllers\BalanceMenager;
 
 /**
@@ -32,7 +33,7 @@ class Main extends Authenticated
      *
      * @return void
      */
-    public function incomesAction()
+    public function incAction()
     {
         View::renderTemplate('Main/incomes.html');
     }
@@ -42,9 +43,19 @@ class Main extends Authenticated
      *
      * @return void
      */
-    public function expensesAction()
+    public function expAction()
     {
-        View::renderTemplate('Main/expenses.html');
+        // View::renderTemplate('Main/expenses.html');
+
+        $exCategory = Expense::getExpenseCategory();
+        $payCategory = Expense::getPaymentCategory();
+        // print_r($exCategory);
+
+        View::renderTemplate('Main/expenses.html', [
+            'exCat' => $exCategory,
+            'payCat' => $payCategory,
+        ]);
+
     }
 
                 /**
@@ -58,6 +69,21 @@ class Main extends Authenticated
         $balance = new Balance($dateObject);
         BalanceMenager::showBalanceAction($balance);
     }   
+
+
+    //             /**
+    //  * Show the settings page
+    //  *
+    //  * @return void
+    //  */
+    // public function settingsAction()
+    // {
+    //     // View::renderTemplate('Settings/index.html');
+
+    //     // $expensesCategory = Set::getExpenseCategory();
+
+
+    // }
 
 }
 

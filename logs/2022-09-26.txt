@@ -2,3 +2,146 @@
 Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(47): Core\Router->dispatch('HNAP1/')
 #1 {main}
 Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[26-Sep-2022 19:51:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:51:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:51:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:52:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:52:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:52:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:52:57 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:52:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:53:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:53:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:53:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method settingsAction not found in controller App\Controllers\Main'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(48): Core\Router->dispatch('main/settings')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[26-Sep-2022 19:57:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(54): Core\Router->dispatch('settings/settin...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 19:57:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(54): Core\Router->dispatch('settings/settin...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:34:47 Europe/Berlin] Uncaught exception: 'Twig\Error\LoaderError' with message 'Unable to find template "Main/settings.html" (looked into: C:\xampp\htdocs\php-mvc-personalBudget/App/Views).'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Main/settings.h...')
+#1 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Main/settings.h...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Main/settings.h...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Main/settings.h...')
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\View.php(53): Twig\Environment->render('Main/settings.h...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Main.php(70): Core\View::renderTemplate('Main/settings.h...')
+#6 [internal function]: App\Controllers\Main->settingsAction()
+#7 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#9 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('main/settings')
+#10 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php' on line 227
+[26-Sep-2022 21:34:51 Europe/Berlin] Uncaught exception: 'Twig\Error\LoaderError' with message 'Unable to find template "Main/settings.html" (looked into: C:\xampp\htdocs\php-mvc-personalBudget/App/Views).'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Main/settings.h...')
+#1 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Main/settings.h...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Main/settings.h...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Main/settings.h...')
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\View.php(53): Twig\Environment->render('Main/settings.h...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Main.php(70): Core\View::renderTemplate('Main/settings.h...')
+#6 [internal function]: App\Controllers\Main->settingsAction()
+#7 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#9 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('main/settings')
+#10 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php' on line 227
+[26-Sep-2022 21:34:54 Europe/Berlin] Uncaught exception: 'Twig\Error\LoaderError' with message 'Unable to find template "Main/settings.html" (looked into: C:\xampp\htdocs\php-mvc-personalBudget/App/Views).'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Main/settings.h...')
+#1 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Main/settings.h...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Main/settings.h...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Main/settings.h...')
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\View.php(53): Twig\Environment->render('Main/settings.h...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Main.php(70): Core\View::renderTemplate('Main/settings.h...')
+#6 [internal function]: App\Controllers\Main->settingsAction()
+#7 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#9 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('main/settings')
+#10 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php' on line 227
+[26-Sep-2022 21:35:14 Europe/Berlin] Uncaught exception: 'Twig\Error\LoaderError' with message 'Unable to find template "Main/settings.html" (looked into: C:\xampp\htdocs\php-mvc-personalBudget/App/Views).'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Main/settings.h...')
+#1 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(261): Twig\Loader\FilesystemLoader->getCacheKey('Main/settings.h...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(309): Twig\Environment->getTemplateClass('Main/settings.h...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(277): Twig\Environment->load('Main/settings.h...')
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\View.php(53): Twig\Environment->render('Main/settings.h...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Main.php(70): Core\View::renderTemplate('Main/settings.h...')
+#6 [internal function]: App\Controllers\Main->settingsAction()
+#7 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('settings', Array)
+#9 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('main/settings')
+#10 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Loader\FilesystemLoader.php' on line 227
+[26-Sep-2022 21:35:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:35:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:36:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:36:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:37:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:37:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127
+[26-Sep-2022 21:39:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'Controller class App\Controllers\Settings not found'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 127

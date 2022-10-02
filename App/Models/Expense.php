@@ -86,8 +86,10 @@ class Expense extends \Core\Model
 
         if (empty($this->errors)) {
 
-            $expenseCategoryId = $this->selectExpenseCategoryId();
-            $paymentCategoryId = $this->selectPaymentCategoryId();
+            // $expenseCategoryId = $this->selectExpenseCategoryId();
+            // $paymentCategoryId = $this->selectPaymentCategoryId();
+            $expenseCategoryId = $this->category;
+            $paymentCategoryId = $this->payment;
 
             $sql = 'INSERT INTO expenses VALUES (NULL, :userId, :expenseId, :paymentId, :amount, :dateExpense, :comment)';
             
@@ -132,7 +134,7 @@ class Expense extends \Core\Model
 
 //////////////////////////////////////////////////////////////////////// test ////////////////////////////////////////
 
-    public function getCategory()
+    public static function getExpenseCategory()
     {
         $sql = 'SELECT * FROM expenses_category_assigned_to_users WHERE user_id = :userId';
 
@@ -147,6 +149,54 @@ class Expense extends \Core\Model
     }
 
 
+    public static function getPaymentCategory()
+    {
+        $sql = 'SELECT * FROM payment_methods_assigned_to_users WHERE user_id = :userId';
 
+        $db = static::getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+        $stmt->execute();
+
+        $paymentArray = $stmt->fetchAll(PDO::FETCH_ASSOC);       
+
+        return $paymentArray;
+    }
+
+
+    public static function getExpenseCategoryId($id)
+    {
+        $sql = 'SELECT * FROM expenses_category_assigned_to_users WHERE user_id = :userId AND id = :cat_id';
+
+        $db = static::getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+        $stmt->bindValue(':cat_id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $expenseArray = $stmt->fetchAll(PDO::FETCH_ASSOC);       
+
+        return $expenseArray;
+    }
+
+/////////////////////////////////////////////////////////////////////
+
+public static function getLimit($id)
+{
+    $sql = 'SELECT * FROM expenses_category_assigned_to_users WHERE user_id = :userId AND id = :cat_id';
+
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $expenseArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // $limit = $expenseArray['userLimit'];
+    // echo $limit;
+
+    // print_r($expenseArray);
+    return $expenseArray;
+}
 
 }

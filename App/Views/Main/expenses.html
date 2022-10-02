@@ -28,15 +28,23 @@
                 <div class="col mt-3">
                     <label class="form-label" for="payment">Wybierz sposób płatności:</label>
                     <select class="form-select" aria-label="Default select example" name="payment" id="payment">
-                        <option value="Cash">Gotówka</option>
+                        {% for pay in payCat %}
+                        <option value="{{pay.id}}">{{pay.name}}</option>
+                        {% endfor %}
+
+                        <!-- <option value="Cash">Gotówka</option>
                         <option value="Debit Card">Karta debetowa</option>
-                        <option value="Credit Card">Karta kredytowa</option>
+                        <option value="Credit Card">Karta kredytowa</option> -->
                     </select>
                 </div>
                 <div class="col mt-3">
                     <label class="form-label" for="category">Wybierz kategorię:</label>
-                    <select class="form-select" aria-label="Default select example" name="category" id="category">
-                        <option value="Transport">Transport</option>
+                    <select class="form-select" aria-label="Default select example" name="category" id="category" onchange="checkCategory()">
+                        {% for ex in exCat %}
+                        <option value="{{ex.id}}">{{ex.name}}</option>
+                        {% endfor %}
+<!-- 
+                        <option id ='17' value="Transport">Transport</option>
                         <option value="Books">Książki</option>
                         <option value="Food">Jedzenie</option>
                         <option value="Apartments">Mieszkanie</option>                            
@@ -51,7 +59,7 @@
                         <option value="For Retirement">Emerytura</option>
                         <option value="Debt Repayment">Spłata długów</option>
                         <option value="Gift">Darowizna</option>
-                        <option value="Another">Inne wydatki</option>
+                        <option value="Another">Inne wydatki</option> -->
                     </select>
                 </div>
                 <div class="col mt-3">
@@ -77,7 +85,7 @@
 </section>
 
 <script src="/js/expenses.js"></script>
-<script src="/js/test2.js"></script>
+<script src="/js/limit.js"></script>
 
 
 

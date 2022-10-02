@@ -1,0 +1,401 @@
+[28-Sep-2022 17:36:44 Europe/Berlin] Uncaught exception: 'ParseError' with message 'syntax error, unexpected identifier "View"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(114): class_exists('App\\Controllers...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 26
+[28-Sep-2022 17:36:52 Europe/Berlin] Uncaught exception: 'ParseError' with message 'syntax error, unexpected identifier "View"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(114): class_exists('App\\Controllers...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 26
+[28-Sep-2022 17:37:59 Europe/Berlin] Uncaught exception: 'ParseError' with message 'syntax error, unexpected token ";", expecting "]"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(114): class_exists('App\\Controllers...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 27
+[28-Sep-2022 17:38:30 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:38:31 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:38:36 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:38:41 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:05 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:18 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:39 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:40 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:47 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:48 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:39:57 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Set" not found'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 24
+[28-Sep-2022 17:43:54 Europe/Berlin] Uncaught exception: 'Twig\Error\RuntimeError' with message 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(358) : eval()'d code(55): Twig\Template->displayBlock('body', Array, Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Template.php(394): __TwigTemplate_87d8080717d043058f7482d6291376a2->doDisplay(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Template.php(367): Twig\Template->displayWithErrorHandling(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(358) : eval()'d code(43): Twig\Template->display(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Template.php(394): __TwigTemplate_8c03301b47fa15566a8f5741ca8cec45->doDisplay(Array, Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Template.php(367): Twig\Template->displayWithErrorHandling(Array, Array)
+#6 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Template.php(379): Twig\Template->display(Array)
+#7 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\TemplateWrapper.php(40): Twig\Template->render(Array, Array)
+#8 C:\xampp\htdocs\php-mvc-personalBudget\vendor\twig\twig\src\Environment.php(277): Twig\TemplateWrapper->render(Array)
+#9 C:\xampp\htdocs\php-mvc-personalBudget\Core\View.php(53): Twig\Environment->render('Settings/index....', Array)
+#10 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php(29): Core\View::renderTemplate('Settings/index....', Array)
+#11 [internal function]: App\Controllers\Settings->indexAction()
+#12 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#14 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('settings/index')
+#15 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Views\Settings\index.html' on line 29
+[28-Sep-2022 17:58:35 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:17:15 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:18:18 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:18:31 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:18:58 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:20:09 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:22:26 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:22:45 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:22:51 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:23:07 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:24:50 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:26:27 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:35:27 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:36:36 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:36:51 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:37:10 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:38:10 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:39:03 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:40:59 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:41:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:41:18 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:41:51 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:41:54 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:41:58 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:42:05 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:55:32 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:57:45 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:58:10 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 18:58:20 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:00:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[28-Sep-2022 19:03:00 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:05:32 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:06:24 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:06:36 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:06:43 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:07:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:09:52 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->getExpensesCategoryAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesCate...', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 45
+[28-Sep-2022 19:37:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[28-Sep-2022 19:37:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method getExpenseCategoryAction not found in controller App\Controllers\Expenses'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpenseCateg...', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[28-Sep-2022 19:38:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'Method getExpenseCategoryAction not found in controller App\Controllers\Expenses'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpenseCateg...', Array)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('expenses/getExp...')
+#2 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php' on line 54
+[28-Sep-2022 19:39:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[28-Sep-2022 19:54:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(55): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130

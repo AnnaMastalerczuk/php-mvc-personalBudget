@@ -36,14 +36,20 @@ class Expenses extends Authenticated
 
     //////////////////////////////////////////////// test //////////////////////////////////////////////////////////
 
-    public function getExpensesCategoryAction()
+    public function getCategoryLimitAction()
     {
+
+        $id = $this->route_params['id'];
+        $date = Expense::getLimit($id);
+        // print_r($date);
+        echo json_encode($date);
+    
 
         // echo json_encode(Expense::getCategory(), JSON_UNESCAPED_UNICODE);
         // echo json_encode("aasas");
-        $expense = new Expense($_POST);
-        $date = $expense->getCategory();
-        echo json_encode($date);
+        // $expense = new Expense($_POST);
+        // $date = $expense->getLimit();
+        // echo json_encode($date);
 
         // return $date;
     }

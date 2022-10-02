@@ -34,14 +34,29 @@ $router->add('', ['controller' => 'Home', 'action' => 'index']);
 $router->add('login', ['controller' => 'Home', 'action' => 'index']);
 $router->add('logout', ['controller' => 'Home', 'action' => 'destroy']);
 $router->add('menu', ['controller' => 'Main', 'action' => 'menu']);
+
+$router->add('setting', ['controller' => 'Settings', 'action' => 'index']);
+
+$router->add('expenses', ['controller' => 'Main', 'action' => 'expenses']);
+$router->add('incomes', ['controller' => 'Main', 'action' => 'incomes']);
+
+$router->add('expenses/getExpensesCategoryId/{id:[\d]+}', ['controller' => 'Settings', 'action' => 'getExpensesCategoryId']);
+
+/////////////////
+$router->add('expenses/getCategoryLimit/{id:[\d]+}', ['controller' => 'Expenses', 'action' => 'getCategoryLimit']);
+
+
+
+
+
 $router->add('{controller}/{action}');
 
 // $router->add('/expenses', ['controller' => 'Expenses', 'action' => 'expenses']);
 
 /////////////////////////////////////////////
-$router->add('{controller}/{action}');
-$router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
-$router->add('{controller}/{id:\d+}/{action}');
+// $router->add('{controller}/{action}');
+// $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
+// $router->add('{controller}/{id:\d+}/{action}');
 /////////////////////////////////////////////////////////
     
 $router->dispatch($_SERVER['QUERY_STRING']);
