@@ -1,0 +1,8 @@
+[03-Oct-2022 18:01:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[03-Oct-2022 19:25:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130

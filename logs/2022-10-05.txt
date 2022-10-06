@@ -1,0 +1,186 @@
+[05-Oct-2022 18:01:32 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:02:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:04:46 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:16:29 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:18:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:19:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:23:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:28:08 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'preg_match(): Compilation failed: quantifier does not follow a repeatable item at offset 37'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'preg_match(): C...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(71): preg_match('/^expenses\\/get...', 'main/exp', Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(109): Core\Router->match('main/exp')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('main/exp')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 71
+[05-Oct-2022 18:28:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:28:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:32:10 Europe/Berlin] Uncaught exception: 'TypeError' with message 'json_encode(): Argument #2 ($flags) must be of type int, string given'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(65): json_encode('', '2022-10-05')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 65
+[05-Oct-2022 18:32:19 Europe/Berlin] Uncaught exception: 'TypeError' with message 'json_encode(): Argument #2 ($flags) must be of type int, string given'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(65): json_encode('', '2022-10-05')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 65
+[05-Oct-2022 18:32:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:32:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:33:14 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:33:26 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:33:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:34:00 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:34:38 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:34:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:37:03 Europe/Berlin] Uncaught exception: 'TypeError' with message 'json_encode(): Argument #2 ($flags) must be of type int, string given'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(65): json_encode('21', '2022-10-05')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 65
+[05-Oct-2022 18:37:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:37:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:37:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:41:14 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:41:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:46:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:46:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:48:14 Europe/Berlin] Uncaught exception: 'ParseError' with message 'syntax error, unexpected token ",", expecting "]"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(114): class_exists('App\\Controllers...')
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getCat...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 60
+[05-Oct-2022 18:48:14 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:48:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 18:50:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:06:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:06:20 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:06:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:06:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:06:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:06:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:07:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:07:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:12:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[05-Oct-2022 19:17:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130

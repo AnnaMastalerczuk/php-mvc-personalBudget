@@ -1,0 +1,72 @@
+[04-Oct-2022 19:17:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 19:37:28 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 19:54:32 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:50:32 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "id"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(42): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 42)
+#1 [internal function]: App\Controllers\Expenses->getCategoryLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getCategoryLimi...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/getCat...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 42
+[04-Oct-2022 20:50:32 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:51:28 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "id"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(42): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 42)
+#1 [internal function]: App\Controllers\Expenses->getCategoryLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getCategoryLimi...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/getCat...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 42
+[04-Oct-2022 20:51:28 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:52:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/getCat...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:52:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:56:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:56:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:57:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:58:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 20:59:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 21:00:28 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[04-Oct-2022 21:01:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130

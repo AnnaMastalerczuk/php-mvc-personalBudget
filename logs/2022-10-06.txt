@@ -1,0 +1,12 @@
+[06-Oct-2022 19:18:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[06-Oct-2022 19:35:33 Europe/Berlin] Uncaught exception: 'TypeError' with message 'json_encode(): Argument #2 ($flags) must be of type int, string given'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(65): json_encode('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 65

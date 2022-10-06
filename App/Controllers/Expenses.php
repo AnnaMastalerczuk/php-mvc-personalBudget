@@ -34,7 +34,7 @@ class Expenses extends Authenticated
         }  
     }
 
-    //////////////////////////////////////////////// test //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public function getCategoryLimitAction()
     {
@@ -52,6 +52,18 @@ class Expenses extends Authenticated
         // echo json_encode($date);
 
         // return $date;
+    }
+
+    public function getExpensesDateAction()
+    {
+
+        $id = $this->route_params['id'];
+        $date = $this->route_params['date'];
+        // print_r($id);
+        // $date = Expense::getLimit($id);
+        // print_r($date);
+        echo json_encode($id);
+
     }
 
 }

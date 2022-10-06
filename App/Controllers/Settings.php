@@ -33,6 +33,10 @@ class Settings extends Authenticated
 
     }
 
+
+
+    ////////////////////////////////////// NIEUZYWANE ///////////////////////////////////////////////////
+
     public function getExpensesCategoryAction()
     {
 
@@ -60,7 +64,9 @@ class Settings extends Authenticated
         echo json_encode($date);
 
         // return $date;
-    }
+    }    
+
+        ////////////////////////////////////// NIEUZYWANE ///////////////////////////////////////////////////
 
 }
 

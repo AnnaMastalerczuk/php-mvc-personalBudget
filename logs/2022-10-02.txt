@@ -299,3 +299,12 @@ Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(19
 #5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/getCat...')
 #6 {main}
 Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 195
+[02-Oct-2022 18:46:32 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "userLimit"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(195): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 195)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(43): App\Models\Expense::getLimit('21')
+#2 [internal function]: App\Controllers\Expenses->getCategoryLimitAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getCategoryLimi...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/getCat...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 195
