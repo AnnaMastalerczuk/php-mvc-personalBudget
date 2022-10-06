@@ -1,62 +1,11 @@
+let dateInput = document.getElementById('date');
+let categoryInput = document.getElementById('category');
+// let categoryId = document.getElementById('category').value;
 
-
-// const getCategories = () => {
-//     fetch("/expenses/getExpensesCategory")
-
-//     .then((res) => {
-//         return res.json();
-//     })
-//     .then((data) => console.log(data))
-
-//     .catch((e) => {
-//         console.log("Error", e);
-//     })
-// };
-
-// const getCategoriesId = () => {
-//     const id = 17;
-//     console.log(id);
-
-   
-//     fetch(`/expenses/getExpensesCategoryId/${id}`)
-
-
-//     .then((res) => {
-//         return res.json();
-//     })
-//     .then((data) => console.log(data))
-
-//     .catch((e) => {
-//         console.log("Error", e);
-//     })
-// };
-
-// getCategoriesId();
-
-// const cos = (id) => {
-//     fetch("/settings/getExpensesCategory")
-//     .then((res) => {
-//         return res.json();
-//     })
-//     .then((data) => console.log(data))
-
-//     .catch((e) => {
-//         console.log("Error", e);
-//     })
-// }
-
-// getCategories();
-
-// function getClickedEditId(clickedId) {
-//     console.log(clickedId);
-//     return clickedEditButtonId = document.getElementById(clickedId);    
-// }
-
-// console.log(clickedEditButtonId);
 
 const checkCategory = async () => {
-    let categoryId = document.getElementById('category').value;
-
+    let categoryId = categoryInput.value;
+    let date = dateInput.value;
     let categoryLimit;
     const jsoNData = await getLimitForTheCategory(categoryId).then(data => {
         categoryLimit = data;
@@ -65,7 +14,7 @@ const checkCategory = async () => {
 
     console.log(categoryLimit);
 
-    checkLimit(categoryLimit, categoryId);
+    checkLimit(categoryLimit, categoryId, date);
 };
 
 const getLimitForTheCategory = async (id) => {
@@ -91,33 +40,23 @@ const getLimitForTheCategory = async (id) => {
     console.error(`Error: ${error}`);
     }
 
-
-
-
-
-
-
-
-
-
-
     // const promiseFetch = await fetch(`/expenses/getCategoryLimit/${id}`);
     // const datajson = await promiseFetch.json();
     // return datajson[0].userLimit;
 
 };
 
-const checkLimit = (categoryLimit, categoryId) => {
+const checkLimit = (categoryLimit, categoryId, date) => {
 
-getSumOfExpensesForSelectedMonth(categoryId);
+getSumOfExpensesForSelectedMonth(categoryId, date);
 
 };
 
-const getSumOfExpensesForSelectedMonth = (id) => {
-    let date = document.getElementById('date').value;
+const getSumOfExpensesForSelectedMonth = (id, date) => {
+    // let date = document.getElementById('date').value;
     // userdate = "2ddfd022";
     console.log(date);
-    console.log(id);
+    // console.log(id);
 
     fetch(`/expenses/getExpensesDate/${id}/${date}`)
     // fetch(`/expenses/getExpensesDate/${userdate}`)
@@ -142,6 +81,18 @@ const getSumOfExpensesForSelectedMonth = (id) => {
 
 
 };
+
+//eventListener
+
+categoryInput.addEventListener('change', async () => {
+    await checkCategory();
+})
+
+dateInput.addEventListener('change', async () => {
+    await checkCategory();
+})
+
+
 
 
 

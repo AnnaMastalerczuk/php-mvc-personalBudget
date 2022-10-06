@@ -10,3 +10,115 @@ Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.
 #4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
 #5 {main}
 Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 65
+[06-Oct-2022 20:41:28 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(63): App\Models\Expense::getExpensesMonth('18', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206
+[06-Oct-2022 20:46:00 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $month'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(63): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 63
+[06-Oct-2022 20:46:15 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $month'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(63): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 63
+[06-Oct-2022 20:55:39 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('19', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206
+[06-Oct-2022 20:56:01 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206
+[06-Oct-2022 20:56:21 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206
+[06-Oct-2022 20:56:42 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('19', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206
+[06-Oct-2022 21:08:30 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 205
+[06-Oct-2022 21:10:49 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 205
+[06-Oct-2022 21:16:05 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 205
+[06-Oct-2022 21:20:03 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('21', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 205
+[06-Oct-2022 21:21:58 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('19', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 205
+[06-Oct-2022 21:26:06 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined function App\Models\findStartAndEndDate()'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('19', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206
+[06-Oct-2022 21:26:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined function App\Models\findStartAndEndDate()'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('20', '2022-10-06')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 206

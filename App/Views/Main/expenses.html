@@ -39,7 +39,7 @@
                 </div>
                 <div class="col mt-3">
                     <label class="form-label" for="category">Wybierz kategorię:</label>
-                    <select class="form-select" aria-label="Default select example" name="category" id="category" onchange="checkCategory()">
+                    <select class="form-select" aria-label="Default select example" name="category" id="category">
                         {% for ex in exCat %}
                         <option value="{{ex.id}}">{{ex.name}}</option>
                         {% endfor %}

@@ -200,4 +200,54 @@ public static function getLimit($id)
 
 }
 
+public static function getExpensesMonth($id, $date)
+{
+    // $dates = $this->findStartAndEndDate($date);
+    // $startDate = $dates[0];
+    // $endDate = $dates[1];
+
+
+    $dateExplode = explode("-", $date);
+    list($year, $month, $day) = $dateExplode;
+
+    $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
+
+    $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
+    $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
+
+
+    $sql = 'SELECT exd.name, ex.amount, ex.date_of_expense 
+            FROM expenses ex, expenses_category_assigned_to_users exd 
+            WHERE ex.user_id=:userId AND ex.expense_category_assigned_to_user_id=:id AND ex.date_of_expense>=:startDate AND ex.date_of_expense<=:endDate AND ex.user_id=exd.user_id AND ex.expense_category_assigned_to_user_id = exd.id';
+
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->bindValue(':startDate', $startDate, PDO::PARAM_STR);
+    $stmt->bindValue(':endDate', $endDate, PDO::PARAM_STR);
+    $stmt->execute();
+
+    $expenseArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $expenseArray;
+
+}
+
+public function findStartAndEndDate($date)
+    {
+        $dateExplode = explode("-", $date);
+        list($year, $month, $day) = $dateExplode;
+
+        $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
+
+        $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
+        $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
+    
+        $dates = [$startDate, $endDate];
+
+        return $dates;
+    }    
+
+
 }

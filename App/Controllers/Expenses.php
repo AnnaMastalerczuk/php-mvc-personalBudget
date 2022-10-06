@@ -59,10 +59,22 @@ class Expenses extends Authenticated
 
         $id = $this->route_params['id'];
         $date = $this->route_params['date'];
+
+        // $dateExplode = explode("-", $date);
+        // list($year, $month, $day) = $dateExplode;
+
+        // $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
+
+        // $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
+        // $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
+    
+        // $dates = [$startDate, $endDate];
+    
+
         // print_r($id);
-        // $date = Expense::getLimit($id);
+        $data = Expense::getExpensesMonth($id, $date);
         // print_r($date);
-        echo json_encode($id);
+        echo json_encode($data);
 
     }
 

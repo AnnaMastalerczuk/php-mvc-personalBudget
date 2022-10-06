@@ -193,7 +193,6 @@ class Balance extends \Core\Model
         return $dates;
     }    
 
-
     /**
      * Summary
      *
