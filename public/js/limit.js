@@ -1,35 +1,30 @@
 let dateInput = document.getElementById('date');
 let categoryInput = document.getElementById('category');
+const limitDiv = document.getElementById('limit');
+let spanLimit = document.getElementById('spanLimit');
+let spanMonthlySum = document.getElementById('spanMonthlySum');
+let infoAboutLimit = document.getElementById('info');
+
 // let categoryId = document.getElementById('category').value;
 
-
+// check Category, get limit
 const checkCategory = async () => {
     let categoryId = categoryInput.value;
     let date = dateInput.value;
     let categoryLimit;
     const jsoNData = await getLimitForTheCategory(categoryId).then(data => {
-        categoryLimit = data;
-        return categoryLimit;
+    categoryLimit = Number(data);
     });
 
-    console.log(categoryLimit);
-
-    checkLimit(categoryLimit, categoryId, date);
+    if (categoryLimit > 0){
+        checkLimit(categoryLimit, categoryId, date);
+    } else {
+        limitDiv.classList.add("limit");
+    }
 };
 
+// get limit for tge category
 const getLimitForTheCategory = async (id) => {
-      
-    // try {
-    //     const response = await fetch(`/expenses/getCategoryLimit/${id}`);
-    //     if (!response.ok) {
-    //       throw new Error(`HTTP error: ${response.status}`);
-    //     }
-    //     const data = await response.json();
-    //     return data[0].userLimit;
-    //   }
-    //   catch (error) {
-    //     console.error(`Error: ${error}`);
-    //   }
 
     try {
         const response = await fetch(`/expenses/getCategoryLimit/${id}`);
@@ -39,46 +34,55 @@ const getLimitForTheCategory = async (id) => {
     catch (error) {
     console.error(`Error: ${error}`);
     }
+};
 
-    // const promiseFetch = await fetch(`/expenses/getCategoryLimit/${id}`);
-    // const datajson = await promiseFetch.json();
-    // return datajson[0].userLimit;
+// get sum of expenses and render result
+const checkLimit = async (categoryLimit, categoryId, date) => {
+let sumOfExpensesMonthly;
+const jsoNData = await getSumOfExpensesForSelectedMonth(categoryId, date).then(data => {
+    sumOfExpensesMonthly = data;
+});
+
+renderOnDom(categoryLimit, sumOfExpensesMonthly);
 
 };
 
-const checkLimit = (categoryLimit, categoryId, date) => {
+// get sum of expenses
+const getSumOfExpensesForSelectedMonth = async (id, date) => {
 
-getSumOfExpensesForSelectedMonth(categoryId, date);
-
+    try {
+        const response = await fetch(`/expenses/getExpensesDate/${id}/${date}`);
+        const data = await response.json();
+        let sum = 0;
+        console.log(data);
+        for (let i = 0; i < data.length; i++){
+            sum += Number(data[i].amount);
+        }
+        return sum;
+    }
+    catch (error) {
+    console.error(`Error: ${error}`);
+    }
 };
 
-const getSumOfExpensesForSelectedMonth = (id, date) => {
-    // let date = document.getElementById('date').value;
-    // userdate = "2ddfd022";
-    console.log(date);
-    // console.log(id);
 
-    fetch(`/expenses/getExpensesDate/${id}/${date}`)
-    // fetch(`/expenses/getExpensesDate/${userdate}`)
-    .then(res => res.json())
-    .then(data => console.log(data))
+const renderOnDom = (categoryLimit, sumOfExpensesMonthly) => {
+    limitDiv.classList.remove("limit");
+    spanLimit.textContent = `${categoryLimit}`;
+    spanMonthlySum.textContent = `${sumOfExpensesMonthly}`;
+    let restAmount = categoryLimit - sumOfExpensesMonthly;
+    // const infoAboutLimit = limitDiv.appendChild(document.createElement('p'));
 
-    // fetch(`/expenses/getCategoryLimit/${id}`)
-    // .then(res => res.json())
-    // .then(date => console.log(date))
+    if (sumOfExpensesMonthly > categoryLimit) {
+        // limitDiv.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+        infoAboutLimit.style.color = "red";
+        infoAboutLimit.textContent = "Limit na bieżący miesiąc jest już przekroczony";
 
-    // try {
-    //     const response = await fetch(`/expenses/getExpenses/${id}`);
-    //     if (!response.ok) {
-    //       throw new Error(`HTTP error: ${response.status}`);
-    //     }
-    //     const data = await response.json();
-    //     return data[0].userLimit;
-    //   }
-    //   catch (error) {
-    //     console.error(`Error: ${error}`);
-    //   }
-
+    } else {
+        // limitDiv.style.backgroundColor = "rgba(0, 255, 0, 0.5)";
+        infoAboutLimit.style.color = "green";
+        infoAboutLimit.textContent = `Aby nie przekroczyć limitu w bieżącym miesiącu możesz wydać jeszcze: ${restAmount} zł`;
+    }
 
 };
 

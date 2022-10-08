@@ -16,3 +16,7 @@ button.btn-outline-dark:hover{
 h1{
     letter-spacing: 0.2em;    
 }
+
+.limit{
+    display:none;
+}
