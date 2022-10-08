@@ -72,7 +72,8 @@ class Expenses extends Authenticated
     
 
         // print_r($id);
-        $data = Expense::getExpensesMonth($id, $date);
+        $dates = Expense::findStartAndEndDate($date);
+        $data = Expense::getExpensesMonth($id, $date, $dates);
         // print_r($date);
         echo json_encode($data);
 

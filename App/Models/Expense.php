@@ -200,21 +200,23 @@ public static function getLimit($id)
 
 }
 
-public static function getExpensesMonth($id, $date)
+public static function getExpensesMonth($id, $date, $dates)
 {
     // $dates = $this->findStartAndEndDate($date);
-    // $startDate = $dates[0];
-    // $endDate = $dates[1];
+    $startDate = $dates[0];
+    $endDate = $dates[1];
 
 
-    $dateExplode = explode("-", $date);
-    list($year, $month, $day) = $dateExplode;
+    // $dateExplode = explode("-", $date);
+    // list($year, $month, $day) = $dateExplode;
 
-    $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
+    // $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
 
-    $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
-    $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
+    // $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
+    // $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
 
+    // $startDate = findStartDate($date);
+    // $endDate = findEndDate($date);
 
     $sql = 'SELECT exd.name, ex.amount, ex.date_of_expense 
             FROM expenses ex, expenses_category_assigned_to_users exd 
@@ -234,7 +236,7 @@ public static function getExpensesMonth($id, $date)
 
 }
 
-public function findStartAndEndDate($date)
+public static function findStartAndEndDate($date)
     {
         $dateExplode = explode("-", $date);
         list($year, $month, $day) = $dateExplode;
@@ -249,5 +251,27 @@ public function findStartAndEndDate($date)
         return $dates;
     }    
 
+    
+public function findStartDate($date)
+{
+    $dateExplode = explode("-", $date);
+    list($year, $month, $day) = $dateExplode;
+
+    $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
+
+    return $startDate;
+}  
+
+public function findEndDate($date)
+{
+    $dateExplode = explode("-", $date);
+    list($year, $month, $day) = $dateExplode;
+
+    $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
+
+    $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
+
+    return $endDate;
+}  
 
 }

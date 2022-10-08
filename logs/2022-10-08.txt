@@ -1,0 +1,28 @@
+[08-Oct-2022 12:30:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[08-Oct-2022 12:33:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Using $this when not in object context'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('18', '2022-10-08')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 218
+[08-Oct-2022 12:33:54 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined function App\Models\findStartDate()'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(75): App\Models\Expense::getExpensesMonth('21', '2022-10-08')
+#1 [internal function]: App\Controllers\Expenses->getExpensesDateAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getExpensesDate', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('expenses/getExp...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 218
+[08-Oct-2022 12:35:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[08-Oct-2022 12:36:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
