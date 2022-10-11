@@ -44,6 +44,7 @@ $router->add('incomes', ['controller' => 'Main', 'action' => 'incomes']);
 $router->add('expenses/getCategoryLimit/{id:[\d]+}', ['controller' => 'Expenses', 'action' => 'getCategoryLimit']);
 $router->add('expenses/getExpensesDate/{id:[\d]+}/{date:(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])}', ['controller' => 'Expenses', 'action' => 'getExpensesDate']);
 // $router->add('expenses/getExpensesDate/{id:[\d]+}&&{userdate:(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])}', ['controller' => 'Expenses', 'action' => 'getExpensesDate']);
+$router->add('expenses/postLimit', ['controller' => 'Expenses', 'action' => 'postLimit']);
 
 
 

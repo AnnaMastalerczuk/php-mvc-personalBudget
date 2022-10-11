@@ -1,0 +1,82 @@
+[09-Oct-2022 12:41:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(61): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:14:01 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "id"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:15:46 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:15:54 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "id"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:18:33 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "userLimit"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:21:44 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "userLimit"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:23:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:28:04 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "userLimit"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:28:34 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "dane"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:34:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:35:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:36:16 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:36:21 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "dane"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:37:39 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "dane"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[09-Oct-2022 22:37:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[09-Oct-2022 22:38:01 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "dane"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84

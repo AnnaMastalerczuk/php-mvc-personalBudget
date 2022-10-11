@@ -202,21 +202,8 @@ public static function getLimit($id)
 
 public static function getExpensesMonth($id, $date, $dates)
 {
-    // $dates = $this->findStartAndEndDate($date);
     $startDate = $dates[0];
     $endDate = $dates[1];
-
-
-    // $dateExplode = explode("-", $date);
-    // list($year, $month, $day) = $dateExplode;
-
-    // $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
-
-    // $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
-    // $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
-
-    // $startDate = findStartDate($date);
-    // $endDate = findEndDate($date);
 
     $sql = 'SELECT exd.name, ex.amount, ex.date_of_expense 
             FROM expenses ex, expenses_category_assigned_to_users exd 
@@ -249,29 +236,48 @@ public static function findStartAndEndDate($date)
         $dates = [$startDate, $endDate];
 
         return $dates;
-    }    
+    }
+
+public static function postLimitToBase($categoryId, $categoryLimit)
+{
+    $sql = 'UPDATE expenses_category_assigned_to_users SET userLimit = :cat_limit WHERE user_id = :userId AND id = :cat_id';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':cat_limit', $categoryLimit, PDO::PARAM_INT);
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $categoryId, PDO::PARAM_INT);          
+                                    
+    return $stmt->execute();
+
+}
+
+
+
+
 
     
-public function findStartDate($date)
-{
-    $dateExplode = explode("-", $date);
-    list($year, $month, $day) = $dateExplode;
+// public function findStartDate($date)
+// {
+//     $dateExplode = explode("-", $date);
+//     list($year, $month, $day) = $dateExplode;
 
-    $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
+//     $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
 
-    return $startDate;
-}  
+//     return $startDate;
+// }  
 
-public function findEndDate($date)
-{
-    $dateExplode = explode("-", $date);
-    list($year, $month, $day) = $dateExplode;
+// public function findEndDate($date)
+// {
+//     $dateExplode = explode("-", $date);
+//     list($year, $month, $day) = $dateExplode;
 
-    $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
+//     $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
 
-    $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
+//     $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
 
-    return $endDate;
-}  
+//     return $endDate;
+// }  
 
 }

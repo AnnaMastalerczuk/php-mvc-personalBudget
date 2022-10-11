@@ -1,0 +1,117 @@
+[10-Oct-2022 17:27:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[10-Oct-2022 17:28:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[10-Oct-2022 17:28:42 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "dane"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[10-Oct-2022 17:55:25 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "idCat"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[10-Oct-2022 17:56:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('personalBudgetP...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[10-Oct-2022 17:57:19 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "idCat"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[10-Oct-2022 17:58:36 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "idCat"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[10-Oct-2022 17:59:15 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "idCat"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): App\Controllers\Expenses->postLimit()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[10-Oct-2022 19:56:14 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'json_decode(): Passing null to parameter #1 ($json) of type string is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(8192, 'json_decode(): ...', 'C:\\xampp\\htdocs...', 92)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(92): json_decode(NULL)
+#2 [internal function]: App\Controllers\Expenses->postLimitAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 92
+[10-Oct-2022 19:59:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[10-Oct-2022 20:00:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[10-Oct-2022 20:00:28 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[10-Oct-2022 20:01:00 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "idCat"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(84): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 84)
+#1 [internal function]: App\Controllers\Expenses->postLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 84
+[10-Oct-2022 20:01:46 Europe/Berlin] Uncaught exception: 'Error' with message 'Object of class stdClass could not be converted to string'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->postLimitAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 90
+[10-Oct-2022 20:06:24 Europe/Berlin] Uncaught exception: 'Error' with message 'Object of class stdClass could not be converted to string'
+Stack trace: #0 [internal function]: App\Controllers\Expenses->postLimitAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 96
+[10-Oct-2022 20:16:41 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined property: stdClass::$catId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(96): Core\Error::errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 96)
+#1 [internal function]: App\Controllers\Expenses->postLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 96
+[10-Oct-2022 20:18:18 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined property: stdClass::$catId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(96): Core\Error::errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 96)
+#1 [internal function]: App\Controllers\Expenses->postLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 96
+[10-Oct-2022 20:18:41 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined property: stdClass::$catId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(96): Core\Error::errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 96)
+#1 [internal function]: App\Controllers\Expenses->postLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 96
+[10-Oct-2022 20:19:17 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined property: stdClass::$catId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(96): Core\Error::errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 96)
+#1 [internal function]: App\Controllers\Expenses->postLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 96

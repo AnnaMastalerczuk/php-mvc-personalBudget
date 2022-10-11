@@ -41,17 +41,8 @@ class Expenses extends Authenticated
 
         $id = $this->route_params['id'];
         $date = Expense::getLimit($id);
-        // print_r($date);
+        
         echo json_encode($date);
-    
-
-        // echo json_encode(Expense::getCategory(), JSON_UNESCAPED_UNICODE);
-        // echo json_encode("aasas");
-        // $expense = new Expense($_POST);
-        // $date = $expense->getLimit();
-        // echo json_encode($date);
-
-        // return $date;
     }
 
     public function getExpensesDateAction()
@@ -60,23 +51,26 @@ class Expenses extends Authenticated
         $id = $this->route_params['id'];
         $date = $this->route_params['date'];
 
-        // $dateExplode = explode("-", $date);
-        // list($year, $month, $day) = $dateExplode;
-
-        // $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
-
-        // $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
-        // $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
-    
-        // $dates = [$startDate, $endDate];
-    
-
-        // print_r($id);
         $dates = Expense::findStartAndEndDate($date);
         $data = Expense::getExpensesMonth($id, $date, $dates);
-        // print_r($date);
+
         echo json_encode($data);
 
+    }
+
+    public function postLimitAction()
+    {
+        if(isset($_POST['postCategoryId'])) {
+            $categoryId = $_POST['postCategoryId'];
+        }
+
+        if(isset($_POST['postCategoryLimit'])) {
+            $categoryLimit = $_POST['postCategoryLimit'];
+        }
+
+        $result = Expense::postLimitToBase($categoryId, $categoryLimit);
+
+        echo json_encode($result);
     }
 
 }

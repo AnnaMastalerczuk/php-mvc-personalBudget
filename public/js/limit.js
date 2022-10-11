@@ -1,3 +1,5 @@
+// Expenses
+
 let dateInput = document.getElementById('date');
 let categoryInput = document.getElementById('category');
 const limitDiv = document.getElementById('limit');
