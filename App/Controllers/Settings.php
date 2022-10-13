@@ -25,7 +25,6 @@ class Settings extends Authenticated
     public function indexAction()
     {
         $exCategory = Expense::getExpenseCategory();
-        // print_r($exCategory);
 
         View::renderTemplate('Settings/index.html', [
             'exCat' => $exCategory

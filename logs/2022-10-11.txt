@@ -126,3 +126,7 @@ Stack trace: #0 [internal function]: App\Controllers\Expenses->postLimitAction()
 #3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/postLi...')
 #4 {main}
 Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 98
+[11-Oct-2022 22:45:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130

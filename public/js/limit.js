@@ -7,6 +7,7 @@ let spanLimit = document.getElementById('spanLimit');
 let spanMonthlySum = document.getElementById('spanMonthlySum');
 let infoAboutLimit = document.getElementById('info');
 
+
 // let categoryId = document.getElementById('category').value;
 
 // check Category, get limit
@@ -97,6 +98,8 @@ categoryInput.addEventListener('change', async () => {
 dateInput.addEventListener('change', async () => {
     await checkCategory();
 })
+
+document.onload = checkCategory();
 
 
 

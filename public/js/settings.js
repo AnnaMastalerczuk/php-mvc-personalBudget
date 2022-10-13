@@ -4,17 +4,19 @@ const fieldset = document.querySelector('fieldset');
 const saveBtn = document.getElementById('save');
 const limitSettingInfo = document.querySelector('p.limit');
 
+
 const editCategory = ((id) => {
+    console.log(id);
     limitButton.checked = false;
     fieldset.disabled = true;
     amountInput.value ="";
     limitSettingInfo.classList.add("limit");
-    
 
         saveBtn.addEventListener('click', () => {
             if (amountInput.value !== "" && limitButton.checked){
             limitSettingInfo.classList.remove("limit");
             savelimit(id, amountInput.value);
+            changeLimitOnDom(amountInput.value, id);
             }
         })
 
@@ -64,7 +66,7 @@ $.ajax({
 };
 
 
-const switchOnLimit = (()=> {
+const switchOnLimit = (() => {
     if (limitButton.checked) {
         fieldset.disabled = false;
     } else {
@@ -72,6 +74,20 @@ const switchOnLimit = (()=> {
         amountInput.value ="";
     }
 });
+
+const changeLimitOnDom = ((limit, id) => {
+    let limitP = document.getElementById(`pLimit${id}`);
+    let limitN = format(limit,2);
+    limitP.textContent = `Limit: ${limitN} zł`;
+});
+
+function format(liczba, lmpp) {
+    ile = ""+Math.round(liczba*Math.pow(10,lmpp))/Math.pow(10,lmpp);
+    if (ile.indexOf(".")<0) ile+=".0";
+    while ((ile.length-ile.indexOf(".")-1)<lmpp) ile = ile+"0";
+    // ile = ile.replace(/\./,",");
+    return ile;
+  }
 
 
 

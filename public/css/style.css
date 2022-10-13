@@ -20,3 +20,7 @@ h1{
 .limit{
     display:none;
 }
+
+.small-font{
+    font-size: 0.8em;
+}
