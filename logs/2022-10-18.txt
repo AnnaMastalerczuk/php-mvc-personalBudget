@@ -1,0 +1,68 @@
+[18-Oct-2022 18:20:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 18:50:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 19:15:37 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 19:58:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 19:58:29 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $categoryId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(91): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: App\Controllers\Expenses->deleteExpensesInCategoryAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('deleteExpensesI...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/delete...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 91
+[18-Oct-2022 19:59:35 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $categoryId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(91): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: App\Controllers\Expenses->deleteExpensesInCategoryAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('deleteExpensesI...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/delete...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 91
+[18-Oct-2022 20:08:38 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 20:09:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 20:09:07 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $categoryId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(91): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: App\Controllers\Expenses->deleteExpensesInCategoryAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('deleteExpensesI...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/delete...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 91
+[18-Oct-2022 20:13:49 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 20:15:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[18-Oct-2022 20:16:37 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $categoryId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(91): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: App\Controllers\Expenses->deleteExpensesInCategoryAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('deleteExpensesI...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(62): Core\Router->dispatch('expenses/delete...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 91
+[18-Oct-2022 20:22:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130

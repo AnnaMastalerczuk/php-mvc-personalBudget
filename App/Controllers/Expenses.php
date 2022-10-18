@@ -41,7 +41,7 @@ class Expenses extends Authenticated
 
         $id = $this->route_params['id'];
         $date = Expense::getLimit($id);
-        
+
         echo json_encode($date);
     }
 
@@ -69,6 +69,37 @@ class Expenses extends Authenticated
         }
 
         $result = Expense::postLimitToBase($categoryId, $categoryLimit);
+
+        echo json_encode($result);
+    }
+
+    public function getExpensesFromCategoryAction()
+    {
+
+        $id = $this->route_params['id'];
+        $date = Expense::getExpensesFromCategory($id);
+        
+        echo json_encode($date);
+    }
+
+    public function deleteExpensesInCategoryAction()
+    {
+        if(isset($_POST['deleteCategoryId'])) {
+            $categoryId = $_POST['deleteCategoryId'];
+        }
+
+        $result = Expense::deleteExpensesInCategory($categoryId);
+
+        echo json_encode($result);
+    }
+
+    public function deleteCategoryAction()
+    {
+        if(isset($_POST['deleteCategoryId'])) {
+            $categoryId = $_POST['deleteCategoryId'];
+        }
+
+        $result = Expense::deleteCategory($categoryId);
 
         echo json_encode($result);
     }

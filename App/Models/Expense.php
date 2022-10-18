@@ -253,6 +253,50 @@ public static function postLimitToBase($categoryId, $categoryLimit)
 
 }
 
+public static function getExpensesFromCategory($id)
+{
+    $sql = 'SELECT * FROM expenses WHERE user_id = :userId AND expense_category_assigned_to_user_id = :cat_id';
+    // $sql = 'SELECT COUNT(id) FROM expenses WHERE user_id = :userId AND expense_category_assigned_to_user_id = :cat_id';
+
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $expenseArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $expenseArray;
+
+}
+
+public static function deleteExpensesInCategory($categoryId)
+{
+    $sql = 'DELETE FROM expenses WHERE user_id = :userId AND expense_category_assigned_to_user_id = :cat_id';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $categoryId, PDO::PARAM_INT);          
+                                    
+    return $stmt->execute();
+}
+
+public static function deleteCategory($categoryId)
+{
+    $sql = 'DELETE FROM expenses_category_assigned_to_users WHERE user_id = :userId AND id = :cat_id';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $categoryId, PDO::PARAM_INT);          
+                                    
+    return $stmt->execute();
+}
+
+
 
 
 

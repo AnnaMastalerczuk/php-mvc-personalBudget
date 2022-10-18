@@ -2,8 +2,13 @@ let limitButton = document.getElementById('exampleCheck1');
 let amountInput = document.getElementById('disabledInput');
 const fieldset = document.querySelector('fieldset');
 const saveBtn = document.getElementById('save');
+const removeBtn = document.getElementById('remove');
 const limitSettingInfo = document.querySelector('p.limit');
+// const divRemoveInfo = document.querySelector('div.removeCat');
+let pRemoveInfo = document.querySelector('div.removeCat > p');
+let pRemoveInfo2 = document.querySelector('div.removeCat > p.limit');
 
+// 1. EDIT CATEGORY
 
 const editCategory = ((id) => {
     console.log(id);
@@ -89,10 +94,114 @@ function format(liczba, lmpp) {
     return ile;
   }
 
-
-
 // event
 limitButton.addEventListener('change', () =>{
     switchOnLimit();
 })
+
+// 2. REMOVE CATEGORY
+
+const removeCategory = async (id) => {
+    // let sum = 0;
+    pRemoveInfo2.classList.add("limit");
+    const jsoNData = await getExpensesFromTheCategory(id).then(data => {
+    expensesFromCategory= (data);
+    });
+    numberOfExpenses = countExpenses(expensesFromCategory);
+    showOnDom(numberOfExpenses);
+
+    removeBtn.addEventListener('click', () => {
+        // if (numberOfExpenses == 0){
+        // limitSettingInfo.classList.remove("limit");
+        // savelimit(id, amountInput.value);
+        // changeLimitOnDom(amountInput.value, id);
+        // }
+        // removeInfo.classList.remove("removeInfo");
+        // console.log(removeInfo);
+        pRemoveInfo2.classList.remove("limit");
+
+        if (numberOfExpenses != 0) {
+            removeExpensesInCategory(id);
+        }
+        removeCategoryFromBase(id);
+    })
+};
+
+const getExpensesFromTheCategory = async (id) => {
+
+    try {
+        const response = await fetch(`/expenses/getExpensesFromCategory/${id}`);
+        const data = await response.json();
+        console.log(data);
+        return data;
+    }
+    catch (error) {
+    console.error(`Error: ${error}`);
+    }
+};
+
+const countExpenses = (expensesFromCategory) =>{
+
+    let sum = 0;
+    expensesFromCategory.forEach(expense => {
+        sum ++;
+    })
+
+    return sum;
+};
+
+const showOnDom = (numberOfExpenses) => {
+
+    if (numberOfExpenses === 0) {
+        pRemoveInfo.innerHTML = 'W kategorii nie ma zapisanych żadnych wydatków. <br> Kliknij usuń, jeżeli chcesz usunąć kategorię.';
+    } else {
+        pRemoveInfo.innerHTML = `W kategorii zapisano ${numberOfExpenses} wydatki. <br> Jeżeli chcesz usunąć kategorię, kliknij usuń`;
+    }
+
+    // let pRemove = document.querySelector('div.removeCat > p');
+    // let p = document.createElement("p");
+    // if(pRemove) {
+    //     pRemove.remove();
+    // }
+
+    // if (numberOfExpenses === 0) {
+    //     p.style.color = "green";
+    //     p.innerHTML = 'W kategorii nie ma zapisanych żadnych wydatków. <br> Kliknij usuń, jeżeli chcesz usunąć kategorię.';
+    //     divRemoveInfo.appendChild(p);
+    // } else {
+    //     p.style.color = "red";
+    //     p.innerHTML = `W kategorii zapisano ${numberOfExpenses} wydatki. <br> Jeżeli chcesz usunąć kategorię, kliknij usuń`;
+    //     divRemoveInfo.appendChild(p);
+    // }
+
+};
+
+const removeExpensesInCategory = (id) => { 
+    $.ajax({
+        type: 'POST',
+        url: '/expenses/deleteExpensesInCategory',
+        dataType: 'json',
+        data: {
+            deleteCategoryId: id,
+        },    
+        success: (result) => console.log(result),
+        error: () => console.log('error'),
+    }); 
+};
+
+const removeCategoryFromBase = (id) => { 
+    $.ajax({
+        type: 'POST',
+        url: '/expenses/deleteCategory',
+        dataType: 'json',
+        data: {
+            deleteCategoryId: id,
+        },
+    
+        success: (result) => console.log(result),
+        error: () => console.log('error'),
+    }); 
+
+    console.log('ok');
+};
 
