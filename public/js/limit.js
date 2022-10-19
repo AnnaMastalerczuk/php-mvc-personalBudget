@@ -7,9 +7,6 @@ let spanLimit = document.getElementById('spanLimit');
 let spanMonthlySum = document.getElementById('spanMonthlySum');
 let infoAboutLimit = document.getElementById('info');
 
-
-// let categoryId = document.getElementById('category').value;
-
 // check Category, get limit
 const checkCategory = async () => {
     let categoryId = categoryInput.value;

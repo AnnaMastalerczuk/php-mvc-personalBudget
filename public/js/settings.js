@@ -4,7 +4,6 @@ const fieldset = document.querySelector('fieldset');
 const saveBtn = document.getElementById('save');
 const removeBtn = document.getElementById('remove');
 const limitSettingInfo = document.querySelector('p.limit');
-// const divRemoveInfo = document.querySelector('div.removeCat');
 let pRemoveInfo = document.querySelector('div.removeCat > p');
 let pRemoveInfo2 = document.querySelector('div.removeCat > p.limit');
 
@@ -24,8 +23,6 @@ const editCategory = ((id) => {
             changeLimitOnDom(amountInput.value, id);
             }
         })
-
-
 });
 
 const savelimit = (id, amount) => {
@@ -90,7 +87,6 @@ function format(liczba, lmpp) {
     ile = ""+Math.round(liczba*Math.pow(10,lmpp))/Math.pow(10,lmpp);
     if (ile.indexOf(".")<0) ile+=".0";
     while ((ile.length-ile.indexOf(".")-1)<lmpp) ile = ile+"0";
-    // ile = ile.replace(/\./,",");
     return ile;
   }
 
@@ -111,19 +107,13 @@ const removeCategory = async (id) => {
     showOnDom(numberOfExpenses);
 
     removeBtn.addEventListener('click', () => {
-        // if (numberOfExpenses == 0){
-        // limitSettingInfo.classList.remove("limit");
-        // savelimit(id, amountInput.value);
-        // changeLimitOnDom(amountInput.value, id);
-        // }
-        // removeInfo.classList.remove("removeInfo");
-        // console.log(removeInfo);
         pRemoveInfo2.classList.remove("limit");
 
         if (numberOfExpenses != 0) {
             removeExpensesInCategory(id);
         }
         removeCategoryFromBase(id);
+        refresh();
     })
 };
 
@@ -157,23 +147,6 @@ const showOnDom = (numberOfExpenses) => {
     } else {
         pRemoveInfo.innerHTML = `W kategorii zapisano ${numberOfExpenses} wydatki. <br> Jeżeli chcesz usunąć kategorię, kliknij usuń`;
     }
-
-    // let pRemove = document.querySelector('div.removeCat > p');
-    // let p = document.createElement("p");
-    // if(pRemove) {
-    //     pRemove.remove();
-    // }
-
-    // if (numberOfExpenses === 0) {
-    //     p.style.color = "green";
-    //     p.innerHTML = 'W kategorii nie ma zapisanych żadnych wydatków. <br> Kliknij usuń, jeżeli chcesz usunąć kategorię.';
-    //     divRemoveInfo.appendChild(p);
-    // } else {
-    //     p.style.color = "red";
-    //     p.innerHTML = `W kategorii zapisano ${numberOfExpenses} wydatki. <br> Jeżeli chcesz usunąć kategorię, kliknij usuń`;
-    //     divRemoveInfo.appendChild(p);
-    // }
-
 };
 
 const removeExpensesInCategory = (id) => { 
@@ -204,4 +177,10 @@ const removeCategoryFromBase = (id) => {
 
     console.log('ok');
 };
+
+function refresh() {    
+    setTimeout(function () {
+        location.reload()
+    }, 1000);
+}
 

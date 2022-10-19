@@ -86,8 +86,6 @@ class Expense extends \Core\Model
 
         if (empty($this->errors)) {
 
-            // $expenseCategoryId = $this->selectExpenseCategoryId();
-            // $paymentCategoryId = $this->selectPaymentCategoryId();
             $expenseCategoryId = $this->category;
             $paymentCategoryId = $this->payment;
 
@@ -192,10 +190,6 @@ public static function getLimit($id)
     $stmt->execute();
 
     $expenseArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    // $limit = $expenseArray['userLimit'];
-    // echo $limit;
-
-    // print_r($expenseArray);
     return $expenseArray;
 
 }
@@ -296,32 +290,5 @@ public static function deleteCategory($categoryId)
     return $stmt->execute();
 }
 
-
-
-
-
-
-    
-// public function findStartDate($date)
-// {
-//     $dateExplode = explode("-", $date);
-//     list($year, $month, $day) = $dateExplode;
-
-//     $startDate = date("Y-m-d", mktime (0,0,0,$month,'01',$year));
-
-//     return $startDate;
-// }  
-
-// public function findEndDate($date)
-// {
-//     $dateExplode = explode("-", $date);
-//     list($year, $month, $day) = $dateExplode;
-
-//     $givenMonthDaysNumber = date('t', strtotime($month . '/1'));
-
-//     $endDate = date("Y-m-d", mktime (0,0,0,$month,$givenMonthDaysNumber,$year));
-
-//     return $endDate;
-// }  
 
 }

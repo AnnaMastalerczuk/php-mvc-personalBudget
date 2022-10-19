@@ -33,39 +33,22 @@ class Settings extends Authenticated
     }
 
 
-
-    ////////////////////////////////////// NIEUZYWANE ///////////////////////////////////////////////////
-
     public function getExpensesCategoryAction()
     {
-
-        // echo json_encode(Expense::getCategory(), JSON_UNESCAPED_UNICODE);
-        // echo json_encode("aasas");
-        // $expense = new Expense($_POST);
-        // $date = $expense->getExpenseCategory();
         $date = Expense::getExpenseCategory();
         echo json_encode($date);
 
-        // return $date;
     }
 
     public function getExpensesCategoryIdAction()
     {
 
-        // echo json_encode(Expense::getCategory(), JSON_UNESCAPED_UNICODE);
-        // echo json_encode("aasas");
-        // $expense = new Expense($_POST);
-        // $date = $expense->getExpenseCategory();
         $id = $this->route_params['id'];
-
 
         $date = Expense::getExpenseCategoryId($id);
         echo json_encode($date);
 
-        // return $date;
     }    
-
-        ////////////////////////////////////// NIEUZYWANE ///////////////////////////////////////////////////
 
 }
 
