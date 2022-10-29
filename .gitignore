@@ -1,7 +1,5 @@
 vendor
 
 composer.lock
-Config.php
-logs/2022-10-19.txt
-App/Config.php
+logs*
 App/Config.php
