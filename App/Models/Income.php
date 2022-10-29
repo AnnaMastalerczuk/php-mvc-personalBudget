@@ -65,7 +65,8 @@ class Income extends \Core\Model
 
         if (empty($this->errors)) {
 
-            $incomeCategoryId = $this->selectIncomesCategoryId();
+            // $incomeCategoryId = $this->selectIncomesCategoryId();
+            $incomeCategoryId = $this->category;
 
             $sql = 'INSERT INTO incomes VALUES (NULL, :userId, :incomeId, :amount, :dateIncome, :comment)';
             
@@ -105,6 +106,22 @@ class Income extends \Core\Model
         {
             $this->errors[] = 'Podana kwota musi być mniejsza niż 1 000 000 zł';
         }
+    }
+
+    //////////////////////////////////////////////////////////////////////// test ////////////////////////////////////////
+
+    public static function getIncomeCategory()
+    {
+        $sql = 'SELECT * FROM incomes_category_assigned_to_users WHERE user_id = :userId';
+
+        $db = static::getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+        $stmt->execute();
+
+        $incomeArray = $stmt->fetchAll(PDO::FETCH_ASSOC);       
+
+        return $incomeArray;
     }
 
 }

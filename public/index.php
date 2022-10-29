@@ -48,6 +48,9 @@ $router->add('expenses/postLimit', ['controller' => 'Expenses', 'action' => 'pos
 $router->add('expenses/getExpensesFromCategory/{id:[\d]+}', ['controller' => 'Expenses', 'action' => 'getExpensesFromCategory']);
 $router->add('expenses/deleteExpensesInCategory', ['controller' => 'Expenses', 'action' => 'deleteExpensesInCategory']);
 $router->add('expenses/deleteCategory', ['controller' => 'Expenses', 'action' => 'deleteCategory']);
+// $router->add('expenses/ifNewcategoryNameExists', ['controller' => 'Expenses', 'action' => 'ifNewcategoryNameExists']);
+$router->add('expenses/ifNewcategoryNameExists/{name:[\w]+}', ['controller' => 'Expenses', 'action' => 'ifNewcategoryNameExists']);
+$router->add('expenses/addNewCategory', ['controller' => 'Expenses', 'action' => 'addNewCategory']);
 
 
 $router->add('{controller}/{action}');

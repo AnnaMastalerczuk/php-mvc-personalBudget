@@ -14,25 +14,25 @@ class Config
      * Database host
      * @var string
      */
-    const DB_HOST = "budget.anna-mastalerczuk.profesjonalnyprogramista.pl.mysql.dhosting.pl";
+    const DB_HOST = "localhost";
 
     /**
      * Database name
      * @var string
      */
-    const DB_NAME = "neek9i_budgetan";
+    const DB_NAME = "personalbudget";
 
     /**
      * Database user
      * @var string
      */
-    const DB_USER = "eed4id_budgetan";
+    const DB_USER = "root";
 
     /**
      * Database password
      * @var string
      */
-    const DB_PASSWORD = "eez4Uu3mu8ru";
+    const DB_PASSWORD = "";
 
     /**
      * Show or hide error messages on screen

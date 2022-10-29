@@ -290,5 +290,41 @@ public static function deleteCategory($categoryId)
     return $stmt->execute();
 }
 
+public static function ifNewcategoryNameExists($newName)
+{
+    $sql = 'SELECT * FROM expenses_category_assigned_to_users WHERE user_id = :userId AND name = :newName';
+
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindParam(':newName', $newName, PDO::PARAM_STR);
+
+    // return $stmt->execute();
+
+    $stmt->execute();
+
+    $expenseArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $row = $stmt->rowCount();
+
+    return $row;  
+
+    // return $stmt->fetch() !== false;
+}
+
+public static function addNewCategory($newName)
+{
+    $sql = 'INSERT INTO expenses_category_assigned_to_users VALUES (NULL, :userId, :newName, :userLimit)';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindParam(':newName', $newName, PDO::PARAM_STR);
+    $stmt->bindValue(':userLimit', 0, PDO::PARAM_INT);
+                                    
+    return $stmt->execute();
+
+}
 
 }

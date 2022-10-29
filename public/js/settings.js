@@ -1,11 +1,23 @@
+// EXPENSES //
+
+//edit
 let limitButton = document.getElementById('exampleCheck1');
 let amountInput = document.getElementById('disabledInput');
 const fieldset = document.querySelector('fieldset');
 const saveBtn = document.getElementById('save');
+
+//remove
 const removeBtn = document.getElementById('remove');
 const limitSettingInfo = document.querySelector('p.limit');
 let pRemoveInfo = document.querySelector('div.removeCat > p');
 let pRemoveInfo2 = document.querySelector('div.removeCat > p.limit');
+
+//add
+const addBtn = document.getElementById('add');
+let inputAddCategory = document.querySelector('div.addCat input');
+const pAddInfoAdded = document.querySelector('div.addCat p');
+const pAddInfoExist = document.querySelector('div.addCat p+p');
+
 
 // 1. EDIT CATEGORY
 
@@ -174,8 +186,6 @@ const removeCategoryFromBase = (id) => {
         success: (result) => console.log(result),
         error: () => console.log('error'),
     }); 
-
-    console.log('ok');
 };
 
 function refresh() {    
@@ -183,4 +193,74 @@ function refresh() {
         location.reload()
     }, 1000);
 }
+
+// 3. ADD CATEGORY
+
+const addCategory = (() => {
+    pAddInfoExist.classList.add('limit');
+    pAddInfoAdded.classList.add('limit');
+    inputAddCategory.value = '';
+
+    addBtn.addEventListener('click', async () => {
+        if (inputAddCategory.value !== ""){
+            const jsoNData = await getNumberOfRows(inputAddCategory.value).then(data => {
+                pAddInfoExist.classList.add('limit');
+                pAddInfoAdded.classList.add('limit'); 
+                if(data === 0) {
+                    addNewCategory(inputAddCategory.value);
+                    pAddInfoAdded.classList.remove('limit');
+                    refresh();
+                } else {
+                    pAddInfoExist.classList.remove('limit');
+                }
+            });
+        }
+    })
+
+});
+
+const getNumberOfRows = async (newName) => {
+
+    let name = newName;
+    try {
+        const response = await fetch(`/expenses/ifNewcategoryNameExists/${name}`);
+        const data = await response.json();
+        console.log(data);
+        return data;
+    }
+    catch (error) {
+    console.error(`Error: ${error}`);
+    }
+};
+
+const addNewCategory = (newName) => { 
+    $.ajax({
+        type: 'POST',
+        url: '/expenses/addNewCategory',
+        dataType: 'json',
+        data: {
+            name: newName,
+        },
+    
+        success: (result) => console.log(result),
+        error: () => console.log('error'),
+    }); 
+};
+
+// const getNumberOfRows = ((newCatName) => {
+//     // $.ajax({
+//     //     type: 'POST',
+//     //     url: '/expenses/ifNewcategoryNameExists',
+//     //     dataType: 'json',
+//     //     data: {
+//     //         newName: newCatName,
+//     //     },    
+//     //     success: (result) => console.log(result),
+//     //     error: () => console.log('error'),
+//     // }); 
+    
+// })
+
+
+// INCOMES //
 

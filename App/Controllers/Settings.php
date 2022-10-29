@@ -7,6 +7,7 @@ use \App\Auth;
 
 use \App\Models\Set;
 use \App\Models\Expense;
+use \App\Models\Income;
 
 
 /**
@@ -25,9 +26,11 @@ class Settings extends Authenticated
     public function indexAction()
     {
         $exCategory = Expense::getExpenseCategory();
+        $inCategory = Income::getIncomeCategory();
 
         View::renderTemplate('Settings/index.html', [
-            'exCat' => $exCategory
+            'exCat' => $exCategory,
+            'inCat' => $inCategory,
         ]);
 
     }

@@ -1,0 +1,206 @@
+[29-Oct-2022 13:19:45 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:19:47 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:20:09 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:20:10 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:25:27 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:25:28 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:25:40 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Models\Expense::getIncomeCategory()'
+Stack trace: #0 [internal function]: App\Controllers\Settings->indexAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('settings/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Settings.php' on line 29
+[29-Oct-2022 13:36:55 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:37:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:37:38 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:40:00 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:40:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:40:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:40:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:40:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:40:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:41:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('expenses/getExp...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 13:59:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(63): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 15:11:32 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AN name = 'Transport'' at line 1'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(303): PDOStatement->execute()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(113): App\Models\Expense::ifNewcategoryNameExists('Transport')
+#2 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/ifNewc...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 303
+[29-Oct-2022 15:15:16 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AN name = 'Transport'' at line 1'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(303): PDOStatement->execute()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(113): App\Models\Expense::ifNewcategoryNameExists('Transport')
+#2 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/ifNewc...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 303
+[29-Oct-2022 15:49:54 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Attempt to read property "nums_rows" on array'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(308): Core\Error::errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 308)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(113): App\Models\Expense::ifNewcategoryNameExists('rg')
+#2 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/ifNewc...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 308
+[29-Oct-2022 15:50:26 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Attempt to read property "nums_rows" on array'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(308): Core\Error::errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 308)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(113): App\Models\Expense::ifNewcategoryNameExists('ww')
+#2 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/ifNewc...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 308
+[29-Oct-2022 15:50:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 15:50:38 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Attempt to read property "nums_rows" on array'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php(308): Core\Error::errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 308)
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(113): App\Models\Expense::ifNewcategoryNameExists('ee')
+#2 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/ifNewc...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Expense.php' on line 308
+[29-Oct-2022 15:52:26 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 15:54:34 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $newName'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(113): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 113)
+#1 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(64): Core\Router->dispatch('expenses/ifNewc...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 113
+[29-Oct-2022 16:24:57 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:25:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:27:50 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:35:55 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:36:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:38:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:40:26 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 16:43:26 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "id"'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(124): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 124)
+#1 [internal function]: App\Controllers\Expenses->ifNewcategoryNameExistsAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('ifNewcategoryNa...', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(65): Core\Router->dispatch('expenses/ifNewc...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 124
+[29-Oct-2022 17:12:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(66): Core\Router->dispatch('HNAP1/')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 17:16:09 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(66): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 19:44:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(66): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 19:44:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(66): Core\Router->dispatch('expenses/ifNewc...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
