@@ -37,27 +37,30 @@
                                         </div>
                                         <div class="col-1">
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalEdit"
-                                                onclick="editCategory('{{ex.id}}')"><i
+                                                data-bs-target="#modalEdit" onclick="editCategory('{{ex.id}}')"><i
                                                     class="bi bi-arrow-up-right-square"></i></button>
                                         </div>
                                         <div class="col-1">
                                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                            data-bs-target="#modalRemove"
-                                            onclick="removeCategory('{{ex.id}}')"><i class="bi bi-trash"></i></button>
+                                                data-bs-target="#modalRemove" onclick="removeCategory('{{ex.id}}')"><i
+                                                    class="bi bi-trash"></i></button>
                                         </div>
                                     </div>
                                 </li>
                                 {% endfor %}
                             </ul>
+                            <div class="row">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalAdd" onclick="addCategory()">Dodaj kategorię</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Modal Edycja kategorii-->
-            <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -89,23 +92,54 @@
             </div>
             <!-- Modal usuwanie kategorii-->
             <div class="modal fade" id="modalRemove" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Usuwanie kategorii</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body removeCat">
+                            <p class="p-2"></p>
+                            <p class="limit p-2" style="color:green">Kategoria została usunięta</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Anuluj</button>
+                            <button type="button" class="btn btn-outline-dark" id="remove">Usuń</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal dodawanie kategorii-->
+            <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Usuwanie kategorii</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Dodaj kategorię</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body removeCat">
-                        <p class="p-2"></p>
-                        <p class="limit p-2" style="color:green">Kategoria została usunięta</p>
+                    <div class="modal-body addCat">
+                        <fieldset>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Podaj nazwę kategorii"
+                                    type="text" name="catName">
+                            </div>
+                        </fieldset>
+                        <p class="limit p-2" style="color:green">Kategoria została dodana</p>
+                        <p class="limit p-2" style="color:red">Podana kategoria już istnieje</p>
+                    
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary"
                             data-bs-dismiss="modal">Anuluj</button>
-                        <button type="button" class="btn btn-outline-dark" id="remove">Usuń</button>
+                        <button type="button" class="btn btn-outline-dark" id="add">Dodaj</button>
                     </div>
                 </div>
             </div>
@@ -121,7 +155,32 @@
             <div class="row">
                 <div class="collapse multi-collapse" id="multiCollapseExample2">
                     <div class="card card-body">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nobis expedita sint adipisci perspiciatis quia itaque corrupti architecto cumque inventore dolorem, fuga sequi dignissimos ipsum neque quo, veritatis eaque laboriosam?
+                        <div class="col">
+                            <p>Istniejące kategorie:</p>
+                            <ul class="list-group">
+                                {% for in in inCat %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>{{in.name}}</p>
+                                            <!-- <p class="small-font" id="pLimit{{ex.id}}">Limit: {{ex.userLimit }} zł</p> -->
+                                        </div>
+                                        <!-- <div class="col-1">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalEdit"
+                                                onclick="editCategory('{{ex.id}}')"><i
+                                                    class="bi bi-arrow-up-right-square"></i></button>
+                                        </div> -->
+                                        <div class="col-1">
+                                            <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                                data-bs-target="#modalRemove" onclick="removeCategory('{{in.id}}')"><i
+                                                    class="bi bi-trash"></i></button> -->
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -104,4 +104,37 @@ class Expenses extends Authenticated
         echo json_encode($result);
     }
 
+    // public function ifNewcategoryNameExistsAction()
+    // {
+    //     if(isset($_POST['newName'])) {
+    //         $newName= $_POST['newName'];
+    //     }
+
+    //     $result = Expense::ifNewcategoryNameExists($newName);
+    //     // $result = $newName;
+
+    //     echo json_encode($result);
+    // }
+
+    public function ifNewcategoryNameExistsAction()
+    {
+
+        $newName = $this->route_params['name'];
+        $date = Expense::ifNewcategoryNameExists($newName);
+        // $date = $this->route_params['name'];
+        
+        echo json_encode($date);
+    }
+
+    public function addNewCategoryAction()
+    {
+        if(isset($_POST['name'])) {
+            $categoryName = $_POST['name'];
+        }
+
+        $result = Expense::addNewCategory($categoryName);
+
+        echo json_encode($result);
+    }
+
 }
