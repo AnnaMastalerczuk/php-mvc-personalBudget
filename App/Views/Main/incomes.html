@@ -25,8 +25,15 @@
                     <input class="form-control" type="date" id="date" name="date" min="2000-01-01" required>
                 </div>
                 <div class="col mt-3">
-                    <p>Wybierz kategorię:</p>
-                    <div class="form-check">
+                    <label class="form-label" for="category">Wybierz kategorię:</label>
+                    <select class="form-select" aria-label="Default select example" name="category" id="category">
+                        {% for in in inCat %}
+                        <option value="{{in.id}}">{{in.name}}</option>
+                        {% endfor %}
+                    </select>
+
+
+                    <!-- <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="Salary"
                             value="Salary" checked>
                         <label class="form-check-label" for="Salary">Wynagrodzenie</label>
@@ -44,7 +51,7 @@
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="Another"
                             value="Another">
                         <label class="form-check-label" for="Another">Inne</label>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col mt-3">
                     <label class="form-label" for="comment">Komentarz:</label>

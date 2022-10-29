@@ -6,6 +6,7 @@ use \Core\View;
 use \App\Auth;
 use \App\Models\Balance;
 use \App\Models\Expense;
+use \App\Models\Income;
 use \App\Controllers\BalanceMenager;
 
 /**
@@ -35,7 +36,13 @@ class Main extends Authenticated
      */
     public function incAction()
     {
-        View::renderTemplate('Main/incomes.html');
+        // View::renderTemplate('Main/incomes.html');
+        $inCategory = Income::getIncomeCategory();
+
+        View::renderTemplate('Main/incomes.html', [
+            'inCat' => $inCategory,
+        ]);
+
     }
 
             /**
