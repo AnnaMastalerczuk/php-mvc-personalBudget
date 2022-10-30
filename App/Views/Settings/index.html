@@ -222,7 +222,10 @@
                     <div class="modal-body changePass">
                         <div class="form-group">
                             <label class="form-label" for="password">Podaj hasło:</label>
-                            <input class="form-control" type="password" placeholder="Hasło" id="password" name="password">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="password" placeholder="Hasło" id="password" name="password">
+                                <i class="input-group-text bi bi-eye-slash" id="togglePassword"></i>
+                            </div>
                         </div>
                         <p class="limit p-2" style="color:green">Hasło zostało zmienione</p>
                         <p class="limit p-2" style="color:red">Podane hasło jest nieprawidłowe. <br>Hasło musi zawierać od 6 do 20 znaków</p>
@@ -246,5 +249,6 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
 </script>
 <script src="/js/settings.js"></script>
+<script src="/js/regist.js"></script>
 
 {% endblock %}
