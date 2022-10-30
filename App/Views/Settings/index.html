@@ -58,6 +58,69 @@
                 </div>
             </div>
 
+            <!-- Modal ustawienie przychodów-->
+
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                    aria-controls="multiCollapseExample2">Ustawienia przychodów</button>
+            </div>
+            <div class="row">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        <div class="col">
+                            <p>Istniejące kategorie:</p>
+                            <ul class="list-group">
+                                {% for in in inCat %}
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>{{in.name}}</p>
+                                        </div>
+                                        <!-- <div class="col-1">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalEdit"
+                                                onclick="editCategory('{{ex.id}}')"><i
+                                                    class="bi bi-arrow-up-right-square"></i></button>
+                                        </div> -->
+                                        <div class="col-1">
+                                            <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                                data-bs-target="#modalRemove"
+                                                onclick="removeCategoryIncome('{{in.id}}')"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="row">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalAdd" onclick="addCategoryIncome()">Dodaj kategorię</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal ustawienie konta-->
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample3" aria-expanded="false"
+                    aria-controls="multiCollapseExample3">Ustawienia konta</button>
+            </div>
+            <div class="row">
+                <div class="collapse multi-collapse" id="multiCollapseExample3">
+                    <div class="card card-body">
+                        <div class="col">
+                            <div class="row">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalChange" onclick="changePassword()">Zmień hasło</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Modal Edycja kategorii-->
             <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
@@ -115,75 +178,65 @@
             </div>
 
             <!-- Modal dodawanie kategorii-->
-            <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Dodaj kategorię</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body addCat">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Podaj nazwę kategorii"
+                                        type="text" name="catName">
+                                </div>
+                            </fieldset>
+                            <p class="limit p-2" style="color:green">Kategoria została dodana</p>
+                            <p class="limit p-2" style="color:red">Podana kategoria już istnieje</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Anuluj</button>
+                            <button type="button" class="btn btn-outline-dark" id="add">Dodaj</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal zmiana hasla-->
+            <div class="modal fade" id="modalChange" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Dodaj kategorię</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Zmień hasło</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body addCat">
-                        <fieldset>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Podaj nazwę kategorii"
-                                    type="text" name="catName">
-                            </div>
-                        </fieldset>
-                        <p class="limit p-2" style="color:green">Kategoria została dodana</p>
-                        <p class="limit p-2" style="color:red">Podana kategoria już istnieje</p>
-                    
+                    <div class="modal-body changePass">
+                        <div class="form-group">
+                            <label class="form-label" for="password">Podaj hasło:</label>
+                            <input class="form-control" type="password" placeholder="Hasło" id="password" name="password">
+                        </div>
+                        <p class="limit p-2" style="color:green">Hasło zostało zmienione</p>
+                        <p class="limit p-2" style="color:red">Podane hasło jest nieprawidłowe. <br>Hasło musi zawierać od 6 do 20 znaków</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary"
                             data-bs-dismiss="modal">Anuluj</button>
-                        <button type="button" class="btn btn-outline-dark" id="add">Dodaj</button>
+                        <button type="button" class="btn btn-outline-dark" id="savePass">Zapisz</button>
                     </div>
                 </div>
             </div>
         </div>
 
-            <!-- Modal ustawienie przychodów-->
 
-            <div class="d-grid gap-2 mt-4">
-                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#multiCollapseExample2" aria-expanded="false"
-                    aria-controls="multiCollapseExample2">Ustawienia przychodów</button>
-            </div>
-            <div class="row">
-                <div class="collapse multi-collapse" id="multiCollapseExample2">
-                    <div class="card card-body">
-                        <div class="col">
-                            <p>Istniejące kategorie:</p>
-                            <ul class="list-group">
-                                {% for in in inCat %}
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <p>{{in.name}}</p>
-                                            <!-- <p class="small-font" id="pLimit{{ex.id}}">Limit: {{ex.userLimit }} zł</p> -->
-                                        </div>
-                                        <!-- <div class="col-1">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalEdit"
-                                                onclick="editCategory('{{ex.id}}')"><i
-                                                    class="bi bi-arrow-up-right-square"></i></button>
-                                        </div> -->
-                                        <div class="col-1">
-                                            <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                                data-bs-target="#modalRemove" onclick="removeCategory('{{in.id}}')"><i
-                                                    class="bi bi-trash"></i></button> -->
-                                        </div>
-                                    </div>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

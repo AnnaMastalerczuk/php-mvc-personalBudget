@@ -204,3 +204,21 @@ Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
 Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(66): Core\Router->dispatch('expenses/ifNewc...')
 #1 {main}
 Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[29-Oct-2022 20:23:11 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'incomes_category_assigned_to_user_id' in 'where clause''
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Income.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Incomes.php(43): App\Models\Income::getIncomesFromCategory('15')
+#2 [internal function]: App\Controllers\Incomes->getIncomesFromCategoryAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getIncomesFromC...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(68): Core\Router->dispatch('incomes/getInco...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Income.php' on line 135
+[29-Oct-2022 20:23:20 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'incomes_category_assigned_to_user_id' in 'where clause''
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Income.php(135): PDOStatement->execute()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Incomes.php(43): App\Models\Income::getIncomesFromCategory('13')
+#2 [internal function]: App\Controllers\Incomes->getIncomesFromCategoryAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('getIncomesFromC...', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(68): Core\Router->dispatch('incomes/getInco...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\Income.php' on line 135

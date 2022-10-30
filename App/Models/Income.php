@@ -124,4 +124,82 @@ class Income extends \Core\Model
         return $incomeArray;
     }
 
+    public static function getIncomesFromCategory($id)
+{
+    $sql = 'SELECT * FROM incomes WHERE user_id = :userId AND income_category_assigned_to_user_id = :cat_id';
+
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $incomeArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $incomeArray;
+
+}
+
+public static function deleteIncomesInCategory($categoryId)
+{
+    $sql = 'DELETE FROM incomes WHERE user_id = :userId AND income_category_assigned_to_user_id = :cat_id';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $categoryId, PDO::PARAM_INT);          
+                                    
+    return $stmt->execute();
+}
+
+public static function deleteCategory($categoryId)
+{
+    $sql = 'DELETE FROM incomes_category_assigned_to_users WHERE user_id = :userId AND id = :cat_id';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindValue(':cat_id', $categoryId, PDO::PARAM_INT);          
+                                    
+    return $stmt->execute();
+}
+
+public static function ifNewcategoryNameExists($newName)
+{
+    $sql = 'SELECT * FROM incomes_category_assigned_to_users WHERE user_id = :userId AND name = :newName';
+
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindParam(':newName', $newName, PDO::PARAM_STR);
+
+    // return $stmt->execute();
+
+    $stmt->execute();
+
+    $incomesArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $row = $stmt->rowCount();
+
+    return $row;  
+
+    // return $stmt->fetch() !== false;
+}
+
+public static function addNewCategory($newName)
+{
+    $sql = 'INSERT INTO incomes_category_assigned_to_users VALUES (NULL, :userId, :newName)';
+            
+    $db = static::getDB();
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+    $stmt->bindParam(':newName', $newName, PDO::PARAM_STR);
+                                    
+    return $stmt->execute();
+
+}
+
 }
