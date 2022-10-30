@@ -46,8 +46,6 @@ class User extends \Core\Model
 
             $password_hash = password_hash($this->password, PASSWORD_DEFAULT);
 
-            // $sql = 'INSERT INTO users (id, username, password, email) VALUES (NULL, :login :password_hash, :email)';
-            // $sql = 'INSERT INTO users VALUES (NULL, :login :password_hash, :email)';
             $sql = 'INSERT INTO users (username, password, email) VALUES (:username, :password, :email)';
                                               
             $db = static::getDB();
@@ -208,11 +206,8 @@ class User extends \Core\Model
      */
     public function addIncomesCategory()
     {        
-        // $sql = 'INSERT INTO users (username, password, email) VALUES (:username, :password, :email)';
         $sql = 'INSERT INTO incomes_category_assigned_to_users (user_id, name) SELECT u.id, i.name FROM incomes_category_default AS i, users AS u WHERE u.email = :email';
-        // && ($connection->query("INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT u.id, e.name FROM expenses_category_default AS e, users AS u WHERE u.username = '$login'"))
-        // && ($connection->query("INSERT INTO payment_methods_assigned_to_users (user_id, name) SELECT u.id, p.name FROM payment_methods_default AS p, users AS u WHERE u.username = '$login'")))
-                                              
+                                                  
             $db = static::getDB();
             $stmt = $db->prepare($sql);                                                  
             $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
@@ -221,10 +216,8 @@ class User extends \Core\Model
 
     public function addExpensesCategory()
     {        
-        // $sql = 'INSERT INTO users (username, password, email) VALUES (:username, :password, :email)';
         $sql = 'INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT u.id, e.name FROM expenses_category_default AS e, users AS u WHERE u.email = :email';
-        // && ($connection->query("INSERT INTO payment_methods_assigned_to_users (user_id, name) SELECT u.id, p.name FROM payment_methods_default AS p, users AS u WHERE u.username = '$login'")))
-                                              
+                                                      
             $db = static::getDB();
             $stmt = $db->prepare($sql);                                                  
             $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
@@ -239,6 +232,22 @@ class User extends \Core\Model
             $stmt = $db->prepare($sql);                                                  
             $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
             $stmt->execute();           
+    }
+
+    public static function changePassword($password)
+    {
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = 'UPDATE users SET password = :new_pass WHERE id = :userId';
+        
+        $db = static::getDB();
+        $stmt = $db->prepare($sql);        
+
+        $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
+        $stmt->bindValue(':new_pass', $password_hash, PDO::PARAM_STR);        
+                                        
+        return $stmt->execute();
+
     }
  
 

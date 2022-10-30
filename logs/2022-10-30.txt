@@ -1,0 +1,24 @@
+[30-Oct-2022 12:38:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(70): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[30-Oct-2022 12:50:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(70): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[30-Oct-2022 13:40:16 Europe/Berlin] Uncaught exception: 'Error' with message 'Non-static method App\Models\User::changePassword() cannot be called statically'
+Stack trace: #0 [internal function]: App\Controllers\UserMenager->changePasswordAction()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('changePassword', Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(73): Core\Router->dispatch('userMenager/cha...')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\UserMenager.php' on line 27
+[30-Oct-2022 13:45:28 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Models\User.php(257): PDOStatement->execute()
+#1 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\UserMenager.php(27): App\Models\User::changePassword('nowehubert123')
+#2 [internal function]: App\Controllers\UserMenager->changePasswordAction()
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('changePassword', Array)
+#5 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(73): Core\Router->dispatch('userMenager/cha...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Models\User.php' on line 257

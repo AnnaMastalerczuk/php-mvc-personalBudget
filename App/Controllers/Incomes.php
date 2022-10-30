@@ -33,4 +33,57 @@ class Incomes extends Authenticated
             ]);
         }  
     }
+
+    ////////////////////////////////////////////////////////////////
+
+    public function getIncomesFromCategoryAction()
+    {
+
+        $id = $this->route_params['id'];
+        $date = Income::getIncomesFromCategory($id);
+        
+        echo json_encode($date);
+    }
+
+    public function deleteIncomesInCategoryAction()
+    {
+        if(isset($_POST['deleteCategoryId'])) {
+            $categoryId = $_POST['deleteCategoryId'];
+        }
+
+        $result = Income::deleteIncomesInCategory($categoryId);
+
+        echo json_encode($result);
+    }
+
+    public function deleteCategoryAction()
+    {
+        if(isset($_POST['deleteCategoryId'])) {
+            $categoryId = $_POST['deleteCategoryId'];
+        }
+
+        $result = Income::deleteCategory($categoryId);
+
+        echo json_encode($result);
+    }
+
+    public function ifNewcategoryNameExistsAction()
+    {
+
+        $newName = $this->route_params['name'];
+        $date = Income::ifNewcategoryNameExists($newName);
+          
+        echo json_encode($date);
+    }
+
+    public function addNewCategoryAction()
+    {
+        if(isset($_POST['name'])) {
+            $categoryName = $_POST['name'];
+        }
+
+        $result = Income::addNewCategory($categoryName);
+
+        echo json_encode($result);
+    }
 }
