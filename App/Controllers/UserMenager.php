@@ -23,9 +23,7 @@ class UserMenager extends Authenticated
         if(isset($_POST['pass'])) {
             $password = $_POST['pass'];
         }
-
         $result = User::changePassword($password);
-        // $result = $password;
 
         echo json_encode($result);
     }

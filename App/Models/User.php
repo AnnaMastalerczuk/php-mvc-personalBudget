@@ -241,13 +241,12 @@ class User extends \Core\Model
         $sql = 'UPDATE users SET password = :new_pass WHERE id = :userId';
         
         $db = static::getDB();
-        $stmt = $db->prepare($sql);        
+        $stmt = $db->prepare($sql);
 
         $stmt->bindValue(':userId', $_SESSION['user_id'], PDO::PARAM_INT);
         $stmt->bindValue(':new_pass', $password_hash, PDO::PARAM_STR);        
                                         
         return $stmt->execute();
-
     }
  
 
