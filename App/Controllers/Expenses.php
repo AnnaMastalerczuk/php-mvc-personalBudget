@@ -104,18 +104,6 @@ class Expenses extends Authenticated
         echo json_encode($result);
     }
 
-    // public function ifNewcategoryNameExistsAction()
-    // {
-    //     if(isset($_POST['newName'])) {
-    //         $newName= $_POST['newName'];
-    //     }
-
-    //     $result = Expense::ifNewcategoryNameExists($newName);
-    //     // $result = $newName;
-
-    //     echo json_encode($result);
-    // }
-
     public function ifNewcategoryNameExistsAction()
     {
 

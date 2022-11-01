@@ -28,7 +28,7 @@ const pAddInfoNotChangedPass = document.querySelector('div.changePass p+p');
 // 1. EDIT CATEGORY
 
 const editCategory = ((id) => {
-    console.log(id);
+
     limitButton.checked = false;
     fieldset.disabled = true;
     amountInput.value ="";
@@ -44,9 +44,6 @@ const editCategory = ((id) => {
 });
 
 const savelimit = (id, amount) => {
-
-console.log(id);
-console.log(amount);
 
 $.ajax({
     type: 'POST',

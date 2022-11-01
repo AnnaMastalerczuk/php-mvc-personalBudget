@@ -6,6 +6,7 @@ const limitDiv = document.getElementById('limit');
 let spanLimit = document.getElementById('spanLimit');
 let spanMonthlySum = document.getElementById('spanMonthlySum');
 let infoAboutLimit = document.getElementById('info');
+let amountInput = document.getElementById('amount');
 
 // check Category, get limit
 const checkCategory = async () => {
@@ -38,7 +39,7 @@ const getLimitForTheCategory = async (id) => {
 
 // get sum of expenses and render result
 const checkLimit = async (categoryLimit, categoryId, date) => {
-let sumOfExpensesMonthly;
+let sumOfExpensesMonthly = 0;
 const jsoNData = await getSumOfExpensesForSelectedMonth(categoryId, date).then(data => {
     sumOfExpensesMonthly = data;
 });
@@ -54,7 +55,7 @@ const getSumOfExpensesForSelectedMonth = async (id, date) => {
         const response = await fetch(`/expenses/getExpensesDate/${id}/${date}`);
         const data = await response.json();
         let sum = 0;
-        console.log(data);
+        // console.log(data);
         for (let i = 0; i < data.length; i++){
             sum += Number(data[i].amount);
         }
@@ -70,21 +71,25 @@ const renderOnDom = (categoryLimit, sumOfExpensesMonthly) => {
     limitDiv.classList.remove("limit");
     spanLimit.textContent = `${categoryLimit}`;
     spanMonthlySum.textContent = `${sumOfExpensesMonthly}`;
-    let restAmount = categoryLimit - sumOfExpensesMonthly;
-    // const infoAboutLimit = limitDiv.appendChild(document.createElement('p'));
+    let restAmount = format((Number(categoryLimit) - Number(sumOfExpensesMonthly) - Number(amountInput.value)),2);
 
-    if (sumOfExpensesMonthly > categoryLimit) {
-        // limitDiv.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+    if ((Number(sumOfExpensesMonthly) + Number(amountInput.value)) > categoryLimit) {
         infoAboutLimit.style.color = "red";
         infoAboutLimit.textContent = "Limit na bieżący miesiąc jest już przekroczony";
 
     } else {
-        // limitDiv.style.backgroundColor = "rgba(0, 255, 0, 0.5)";
         infoAboutLimit.style.color = "green";
         infoAboutLimit.textContent = `Aby nie przekroczyć limitu w bieżącym miesiącu możesz wydać jeszcze: ${restAmount} zł`;
     }
 
 };
+
+function format(liczba, lmpp) {
+    ile = ""+Math.round(liczba*Math.pow(10,lmpp))/Math.pow(10,lmpp);
+    if (ile.indexOf(".")<0) ile+=".0";
+    while ((ile.length-ile.indexOf(".")-1)<lmpp) ile = ile+"0";
+    return ile;
+  }
 
 //eventListener
 
@@ -93,6 +98,10 @@ categoryInput.addEventListener('change', async () => {
 })
 
 dateInput.addEventListener('change', async () => {
+    await checkCategory();
+})
+
+amountInput.addEventListener('input', async () => {
     await checkCategory();
 })
 
