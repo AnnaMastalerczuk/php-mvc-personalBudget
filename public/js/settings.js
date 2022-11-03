@@ -3,8 +3,10 @@
 //edit
 let limitButton = document.getElementById('exampleCheck1');
 let amountInput = document.getElementById('disabledInput');
+let id = '';
 const fieldset = document.querySelector('fieldset');
 const saveBtn = document.getElementById('save');
+const editBtns = document.getElementsByClassName('editCategoryBtn');
 
 //remove
 const removeBtn = document.getElementById('remove');
@@ -24,64 +26,26 @@ let inputChangePassword = document.querySelector('div.changePass input');
 const pAddInfoChangedPass = document.querySelector('div.changePass p');
 const pAddInfoNotChangedPass = document.querySelector('div.changePass p+p');
 
-
 // 1. EDIT CATEGORY
 
-const editCategory = ((id) => {
+const saveLimit = () => {
 
-    limitButton.checked = false;
-    fieldset.disabled = true;
-    amountInput.value ="";
-    limitSettingInfo.classList.add("limit");
-
-        saveBtn.addEventListener('click', () => {
-            if (amountInput.value !== "" && limitButton.checked){
-            limitSettingInfo.classList.remove("limit");
-            savelimit(id, amountInput.value);
-            changeLimitOnDom(amountInput.value, id);
-            }
-        })
-});
-
-const savelimit = (id, amount) => {
-
-$.ajax({
-    type: 'POST',
-    url: '/expenses/postLimit',
-    dataType: 'json',
-    data: {
-        postCategoryId: id,
-        postCategoryLimit: amount,
-    },
-
-    success: (result) => console.log(result),
-    error: () => console.log('error'),
-});
-
-    // fetch("/expenses/postLimit", {
-    //     method: 'POST',        
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify({
-    //         idCat: id,
-    //         limit: amount,
-    //     }),
-    //   })
-    //     .then((response) => {
-    //         console.log(response);
-    //         response.json();
-    //     })
-    //     .then((data) => {
-    //       console.log('Success', data);
-    //     })
-    //     .catch((error) => {
-    //       console.error('Error:', error);
-    //     });
-
-   
+    let amount = amountInput.value;
+    
+    $.ajax({
+        type: 'POST',
+        url: '/expenses/postLimit',
+        dataType: 'json',
+        data: {
+            postCategoryId: id,
+            postCategoryLimit: amount,
+        },
+    
+        success: (result) => console.log(result),
+        error: () => console.log('error'),
+    });
+       
 };
-
 
 const switchOnLimit = (() => {
     if (limitButton.checked) {
@@ -92,9 +56,9 @@ const switchOnLimit = (() => {
     }
 });
 
-const changeLimitOnDom = ((limit, id) => {
+const changeLimitOnDom = (() => {
     let limitP = document.getElementById(`pLimit${id}`);
-    let limitN = format(limit,2);
+    let limitN = format(amountInput.value,2);
     limitP.textContent = `Limit: ${limitN} zł`;
 });
 
@@ -105,10 +69,33 @@ function format(liczba, lmpp) {
     return ile;
   }
 
+  const editCategory = e => {
+    id = e.target.id;
+    console.log(id);
+    limitButton.checked = false;
+    fieldset.disabled = true;
+    amountInput.value ="";
+    limitSettingInfo.classList.add("limit");
+}
+
+const saveCategoryLimit =(() => {
+    if (amountInput.value !== "" && limitButton.checked){
+        saveLimit();
+        changeLimitOnDom();
+    }
+})
+
 // event
 limitButton.addEventListener('change', () =>{
     switchOnLimit();
 })
+  
+for (let button of editBtns) {
+    button.addEventListener("click", editCategory);
+}
+
+saveBtn.addEventListener("click", saveCategoryLimit);
+
 
 // 2. REMOVE CATEGORY
 

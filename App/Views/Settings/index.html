@@ -36,9 +36,9 @@
                                             <p class="small-font" id="pLimit{{ex.id}}">Limit: {{ex.userLimit }} zł</p>
                                         </div>
                                         <div class="col-1">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalEdit" onclick="editCategory('{{ex.id}}')"><i
-                                                    class="bi bi-arrow-up-right-square"></i></button>
+                                            <button type="button" class="btn btn-primary editCategoryBtn" id="{{ex.id}}" data-bs-toggle="modal"
+                                                data-bs-target="#modalEdit">
+                                                <i class="bi bi-arrow-up-right-square" id="{{ex.id}}"></i></button>
                                         </div>
                                         <div class="col-1">
                                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
