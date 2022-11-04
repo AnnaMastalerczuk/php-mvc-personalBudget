@@ -18,3 +18,11 @@ Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
 Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(73): Core\Router->dispatch('favicon.ico')
 #1 {main}
 Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php' on line 130
+[03-Nov-2022 22:51:40 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $categoryId'
+Stack trace: #0 C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php(71): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 71)
+#1 [internal function]: App\Controllers\Expenses->postLimitAction()
+#2 C:\xampp\htdocs\php-mvc-personalBudget\Core\Controller.php(50): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\php-mvc-personalBudget\Core\Router.php(121): Core\Controller->__call('postLimit', Array)
+#4 C:\xampp\htdocs\php-mvc-personalBudget\public\index.php(73): Core\Router->dispatch('expenses/postLi...')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\php-mvc-personalBudget\App\Controllers\Expenses.php' on line 71

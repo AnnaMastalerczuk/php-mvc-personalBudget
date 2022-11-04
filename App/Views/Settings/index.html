@@ -36,13 +36,14 @@
                                             <p class="small-font" id="pLimit{{ex.id}}">Limit: {{ex.userLimit }} zł</p>
                                         </div>
                                         <div class="col-1">
-                                            <button type="button" class="btn btn-primary editCategoryBtn" id="{{ex.id}}" data-bs-toggle="modal"
-                                                data-bs-target="#modalEdit">
-                                                <i class="bi bi-arrow-up-right-square" id="{{ex.id}}"></i></button>
+                                            <button type="button" class="btn btn-primary editCategoryBtn" data-bs-toggle="modal"
+                                                data-bs-target="#modalEdit" onclick="editCategoryExpenses('{{ex.id}}')">                                               
+                                                <i class="bi bi-arrow-up-right-square" id="{{ex.id}}"></i>
+                                            </button>
                                         </div>
                                         <div class="col-1">
-                                            <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                                                data-bs-target="#modalRemove" onclick="removeCategory('{{ex.id}}')"><i
+                                            <button type="button" class="btn btn-light btnCategory" data-bs-toggle="modal"
+                                                data-bs-target="#modalRemove" id = "removeExpense" onclick="removeCategoryExpense('{{ex.id}}', id)"><i
                                                     class="bi bi-trash"></i></button>
                                         </div>
                                     </div>
@@ -51,7 +52,7 @@
                             </ul>
                             <div class="row">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modalAdd" onclick="addCategory()">Dodaj kategorię</button>
+                                    data-bs-target="#modalAdd" id="addExpenseCategory">Dodaj kategorię</button>
                             </div>
                         </div>
                     </div>
@@ -84,9 +85,9 @@
                                                     class="bi bi-arrow-up-right-square"></i></button>
                                         </div> -->
                                         <div class="col-1">
-                                            <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-light btnCategory" id = "removeIncome" data-bs-toggle="modal"
                                                 data-bs-target="#modalRemove"
-                                                onclick="removeCategoryIncome('{{in.id}}')"><i
+                                                onclick="removeCategoryIncome('{{in.id}}', id)"><i
                                                     class="bi bi-trash"></i></button>
                                         </div>
                                     </div>
@@ -95,7 +96,7 @@
                             </ul>
                             <div class="row">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modalAdd" onclick="addCategoryIncome()">Dodaj kategorię</button>
+                                    data-bs-target="#modalAdd" id="addIncomeCategory">Dodaj kategorię</button>
                             </div>
                         </div>
                     </div>
@@ -114,7 +115,7 @@
                         <div class="col">
                             <div class="row">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modalChange" onclick="changePassword()">Zmień hasło</button>
+                                    data-bs-target="#modalChange" id="changePassword">Zmień hasło</button>
                             </div>
                         </div>
                     </div>
@@ -153,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal usuwanie kategorii-->
+            <!-- Modal usuwanie kategorii expenses-->
             <div class="modal fade" id="modalRemove" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
