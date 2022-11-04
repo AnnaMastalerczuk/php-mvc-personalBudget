@@ -13,20 +13,43 @@ const removeBtn = document.getElementById('remove');
 const limitSettingInfo = document.querySelector('p.limit');
 let pRemoveInfo = document.querySelector('div.removeCat > p');
 let pRemoveInfo2 = document.querySelector('div.removeCat > p.limit');
+let numberOfTransaction = "";
+let removeKind = '';
 
 //add
 const addBtn = document.getElementById('add');
 let inputAddCategory = document.querySelector('div.addCat input');
 const pAddInfoAdded = document.querySelector('div.addCat p');
 const pAddInfoExist = document.querySelector('div.addCat p+p');
+const addExpenseCategoryBtn = document.getElementById('addExpenseCategory');
+const addIncomeCategoryBtn = document.getElementById('addIncomeCategory');
+let addKind = '';
 
 // password
 const savePassBtn = document.getElementById('savePass');
+const changePasswordBtn = document.getElementById('changePassword');
 let inputChangePassword = document.querySelector('div.changePass input');
 const pAddInfoChangedPass = document.querySelector('div.changePass p');
 const pAddInfoNotChangedPass = document.querySelector('div.changePass p+p');
 
 // 1. EDIT CATEGORY
+
+const editCategoryExpenses = (idFromHtml) => {
+    // id = e.target.id;
+    id = idFromHtml;
+    console.log(id);
+    limitButton.checked = false;
+    fieldset.disabled = true;
+    amountInput.value ="";
+    limitSettingInfo.classList.add("limit");
+}
+
+const saveCategoryLimit =(() => {
+    if (amountInput.value !== "" && limitButton.checked){
+        saveLimit();
+        changeLimitOnDom();
+    }
+});
 
 const saveLimit = () => {
 
@@ -69,55 +92,62 @@ function format(liczba, lmpp) {
     return ile;
   }
 
-  const editCategory = e => {
-    id = e.target.id;
-    console.log(id);
-    limitButton.checked = false;
-    fieldset.disabled = true;
-    amountInput.value ="";
-    limitSettingInfo.classList.add("limit");
-}
-
-const saveCategoryLimit =(() => {
-    if (amountInput.value !== "" && limitButton.checked){
-        saveLimit();
-        changeLimitOnDom();
-    }
-})
-
 // event
 limitButton.addEventListener('change', () =>{
     switchOnLimit();
 })
   
-for (let button of editBtns) {
-    button.addEventListener("click", editCategory);
-}
+// for (let button of editBtns) {
+//     button.addEventListener("click", editCategory);
+// }
 
 saveBtn.addEventListener("click", saveCategoryLimit);
 
 
-// 2. REMOVE CATEGORY
+// 2. REMOVE CATEGORY EXPENSES / INCOMES
 
-const removeCategory = async (id) => {
+const removeCategoryExpense = async (idFromHtml, idRemove) => {
     // let sum = 0;
+    id = idFromHtml;
+    removeKind = idRemove;
     pRemoveInfo2.classList.add("limit");
     const jsoNData = await getExpensesFromTheCategory(id).then(data => {
     expensesFromCategory= (data);
     });
-    numberOfExpenses = countExpensesOrIncomes(expensesFromCategory);
-    showOnDom(numberOfExpenses);
-
-    removeBtn.addEventListener('click', () => {
-        pRemoveInfo2.classList.remove("limit");
-
-        if (numberOfExpenses != 0) {
-            removeExpensesInCategory(id);
-        }
-        removeCategoryFromBase(id);
-        refresh();
-    })
+    numberOfTransaction = countExpensesOrIncomes(expensesFromCategory);
+    showOnDom(numberOfTransaction);
 };
+
+const removeCategoryIncome = async (idFromHtml, idRemove) => {
+    id = idFromHtml;
+    removeKind = idRemove;
+    pRemoveInfo2.classList.add("limit");
+    const jsoNData = await getIncomesFromTheCategory(id).then(data => {
+    incomesFromCategory = (data);
+    });
+    numberOfTransaction = countExpensesOrIncomes(incomesFromCategory);
+    showOnDom(numberOfTransaction);
+};
+
+removeBtn.addEventListener('click', () => {
+    pRemoveInfo2.classList.remove("limit");
+    
+    if(removeKind === "removeExpense")
+    {     
+        if (numberOfTransaction != 0) {
+        removeExpensesInCategory(id);
+        }
+        removeExpenseCategoryFromBase(id);
+        
+    } else if (removeKind === "removeIncome")
+    {
+        if (numberOfTransaction != 0) {
+        removeIncomesInCategory(id);
+        }
+        removeIncomeCategoryFromBase(id);
+    }
+    refresh();
+})
 
 const getExpensesFromTheCategory = async (id) => {
 
@@ -164,7 +194,7 @@ const removeExpensesInCategory = (id) => {
     }); 
 };
 
-const removeCategoryFromBase = (id) => { 
+const removeExpenseCategoryFromBase = (id) => { 
     $.ajax({
         type: 'POST',
         url: '/expenses/deleteCategory',
@@ -176,88 +206,6 @@ const removeCategoryFromBase = (id) => {
         success: (result) => console.log(result),
         error: () => console.log('error'),
     }); 
-};
-
-function refresh() {    
-    setTimeout(function () {
-        location.reload()
-    }, 1000);
-}
-
-// 3. ADD CATEGORY
-
-const addCategory = (() => {
-    pAddInfoExist.classList.add('limit');
-    pAddInfoAdded.classList.add('limit');
-    inputAddCategory.value = '';
-
-    addBtn.addEventListener('click', async () => {
-        if (inputAddCategory.value !== ""){
-            const jsoNData = await getNumberOfRows(inputAddCategory.value).then(data => {
-                pAddInfoExist.classList.add('limit');
-                pAddInfoAdded.classList.add('limit'); 
-                if(data === 0) {
-                    addNewCategory(inputAddCategory.value);
-                    pAddInfoAdded.classList.remove('limit');
-                    refresh();
-                } else {
-                    pAddInfoExist.classList.remove('limit');
-                }
-            });
-        }
-    })
-
-});
-
-const getNumberOfRows = async (newName) => {
-
-    let name = newName;
-    try {
-        const response = await fetch(`/expenses/ifNewcategoryNameExists/${name}`);
-        const data = await response.json();
-        console.log(data);
-        return data;
-    }
-    catch (error) {
-    console.error(`Error: ${error}`);
-    }
-};
-
-const addNewCategory = (newName) => { 
-    $.ajax({
-        type: 'POST',
-        url: '/expenses/addNewCategory',
-        dataType: 'json',
-        data: {
-            name: newName,
-        },
-    
-        success: (result) => console.log(result),
-        error: () => console.log('error'),
-    }); 
-};
-
-//INCOMES//
-
-//1. Remove category
-
-const removeCategoryIncome = async (id) => {
-    pRemoveInfo2.classList.add("limit");
-    const jsoNData = await getIncomesFromTheCategory(id).then(data => {
-    incomesFromCategory = (data);
-    });
-    numberOfIncomes = countExpensesOrIncomes(incomesFromCategory);
-    showOnDom(numberOfIncomes);
-
-    removeBtn.addEventListener('click', () => {
-        pRemoveInfo2.classList.remove("limit");
-
-        if (numberOfIncomes != 0) {
-            removeIncomesInCategory(id);
-        }
-        removeIncomeCategoryFromBase(id);
-        refresh();
-    })
 };
 
 const getIncomesFromTheCategory = async (id) => {
@@ -300,30 +248,60 @@ const removeIncomeCategoryFromBase = (id) => {
     }); 
 };
 
-// 2. ADD CATEGORY
+function refresh() {    
+    setTimeout(function () {
+        location.reload()
+    }, 1000);
+}
 
-const addCategoryIncome = (() => {
+// 3. ADD CATEGORY EXPENSE / INCOME
+
+const addExpenseCategory = ((e) => {
+    addKind = e.target.id;
+    console.log(addKind);
+
+    pAddInfoExist.classList.add('limit');
+    pAddInfoAdded.classList.add('limit');
+    inputAddCategory.value = '';
+});
+
+const addIncomeCategory = ((e) => {
+    addKind = e.target.id;
+    console.log(addKind);
+
     pAddInfoExist.classList.add('limit');
     pAddInfoAdded.classList.add('limit');
     inputAddCategory.value = '';
 
-    addBtn.addEventListener('click', async () => {
-        if (inputAddCategory.value !== ""){
-            const jsoNData = await getNumberOfRowsIncome(inputAddCategory.value).then(data => {
-                pAddInfoExist.classList.add('limit');
-                pAddInfoAdded.classList.add('limit'); 
-                if(data === 0) {
-                    addNewCategoryIncome(inputAddCategory.value);
-                    pAddInfoAdded.classList.remove('limit');
-                    refresh();
-                } else {
-                    pAddInfoExist.classList.remove('limit');
-                }
-            });
-        }
-    })
-
 });
+
+const getNumberOfRowsExpense = async (newName) => {
+
+    let name = newName;
+    try {
+        const response = await fetch(`/expenses/ifNewcategoryNameExists/${name}`);
+        const data = await response.json();
+        console.log(data);
+        return data;
+    }
+    catch (error) {
+    console.error(`Error: ${error}`);
+    }
+};
+
+const addNewCategoryExpense = (newName) => { 
+    $.ajax({
+        type: 'POST',
+        url: '/expenses/addNewCategory',
+        dataType: 'json',
+        data: {
+            name: newName,
+        },
+    
+        success: (result) => console.log(result),
+        error: () => console.log('error'),
+    }); 
+};
 
 const getNumberOfRowsIncome = async (newName) => {
 
@@ -353,6 +331,45 @@ const addNewCategoryIncome = (newName) => {
     }); 
 };
 
+addBtn.addEventListener('click', async () => {
+
+    if (inputAddCategory.value !== "")
+    {
+        pAddInfoExist.classList.add('limit');
+        pAddInfoAdded.classList.add('limit'); 
+        if (addKind === "addExpenseCategory")
+        {
+            const jsoNData = await getNumberOfRowsExpense(inputAddCategory.value).then(data => 
+            {
+                if(data === 0) {
+                    addNewCategoryExpense(inputAddCategory.value);
+                    pAddInfoAdded.classList.remove('limit');
+                    refresh();
+                } else {
+                    pAddInfoExist.classList.remove('limit');
+                }
+            });
+
+        } else if (addKind === "addIncomeCategory")
+        {
+            const jsoNData = await getNumberOfRowsIncome(inputAddCategory.value).then(data => 
+            {
+                if(data === 0) {
+                    addNewCategoryIncome(inputAddCategory.value);
+                    pAddInfoAdded.classList.remove('limit');
+                    refresh();
+                } else {
+                    pAddInfoExist.classList.remove('limit');
+                }
+            });
+        }
+    }
+})
+
+//event
+addExpenseCategoryBtn.addEventListener('click', addExpenseCategory);
+addIncomeCategoryBtn.addEventListener('click', addIncomeCategory);
+
 //USER//
 
 // 1. Change password //
@@ -360,19 +377,6 @@ const addNewCategoryIncome = (newName) => {
 const changePassword = (() => {
     pAddInfoNotChangedPass.classList.add('limit');
     pAddInfoChangedPass.classList.add('limit');
-
-    savePassBtn.addEventListener('click', () => {
-        pAddInfoNotChangedPass.classList.add('limit');
-        pAddInfoChangedPass.classList.add('limit');
-
-        if (validatePassword(inputChangePassword.value)) {
-            changePasswordBase(inputChangePassword.value);
-            pAddInfoChangedPass.classList.remove('limit');
-        } else {
-            pAddInfoNotChangedPass.classList.remove('limit');            
-        }
-        inputChangePassword.value = '';
-    })
 });
 
 const validatePassword = ((password) => {
@@ -394,3 +398,20 @@ const changePasswordBase = (password) => {
         error: () => console.log('error'),
     }); 
 };
+
+//event
+
+changePasswordBtn.addEventListener('click', changePassword);
+
+savePassBtn.addEventListener('click', () => {
+    pAddInfoNotChangedPass.classList.add('limit');
+    pAddInfoChangedPass.classList.add('limit');
+
+    if (validatePassword(inputChangePassword.value)) {
+        changePasswordBase(inputChangePassword.value);
+        pAddInfoChangedPass.classList.remove('limit');
+    } else {
+        pAddInfoNotChangedPass.classList.remove('limit');            
+    }
+    inputChangePassword.value = '';
+})
