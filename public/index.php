@@ -47,13 +47,14 @@ $router->add('expenses/postLimit', ['controller' => 'Expenses', 'action' => 'pos
 $router->add('expenses/getExpensesFromCategory/{id:[\d]+}', ['controller' => 'Expenses', 'action' => 'getExpensesFromCategory']);
 $router->add('expenses/deleteExpensesInCategory', ['controller' => 'Expenses', 'action' => 'deleteExpensesInCategory']);
 $router->add('expenses/deleteCategory', ['controller' => 'Expenses', 'action' => 'deleteCategory']);
-$router->add('expenses/ifNewcategoryNameExists/{name:[\w]+}', ['controller' => 'Expenses', 'action' => 'ifNewcategoryNameExists']);
+// $router->add('expenses/ifNewcategoryNameExists/{name:[\w]+}', ['controller' => 'Expenses', 'action' => 'ifNewcategoryNameExists']);
+$router->add('expenses/ifNewcategoryNameExists/{name:[\w\sęóąśłżźćńĘÓĄŚŁŻŹĆŃ]+}', ['controller' => 'Expenses', 'action' => 'ifNewcategoryNameExists']);
 $router->add('expenses/addNewCategory', ['controller' => 'Expenses', 'action' => 'addNewCategory']);
 
 $router->add('incomes/getIncomesFromCategory/{id:[\d]+}', ['controller' => 'Incomes', 'action' => 'getIncomesFromCategory']);
 $router->add('incomes/deleteIncomesInCategory', ['controller' => 'Incomes', 'action' => 'deleteIncomesInCategory']);
 $router->add('incomes/deleteCategory', ['controller' => 'Incomes', 'action' => 'deleteCategory']);
-$router->add('incomes/ifNewcategoryNameExists/{name:[\w]+}', ['controller' => 'Incomes', 'action' => 'ifNewcategoryNameExists']);
+$router->add('incomes/ifNewcategoryNameExists/{name:[\w\sęóąśłżźćńĘÓĄŚŁŻŹĆŃ]+}', ['controller' => 'Incomes', 'action' => 'ifNewcategoryNameExists']);
 $router->add('incomes/addNewCategory', ['controller' => 'Incomes', 'action' => 'addNewCategory']);
 
 $router->add('userMenager/changePassword', ['controller' => 'UserMenager', 'action' => 'changePassword']);

@@ -36,7 +36,8 @@ margin:0;
 width: 100%;
 }
 
-i{
+i.bi-arrow-up-right-square,
+i.bi-trash{
     display: block;
     height: 100%;
     width: 100%;

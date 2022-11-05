@@ -216,13 +216,23 @@ class User extends \Core\Model
 
     public function addExpensesCategory()
     {        
-        $sql = 'INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT u.id, e.name FROM expenses_category_default AS e, users AS u WHERE u.email = :email';
-                                                      
+        $sql = 'INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT u.id, ex.name FROM expenses_category_default AS ex, users AS u WHERE u.email = :email';
+                                                  
             $db = static::getDB();
             $stmt = $db->prepare($sql);                                                  
             $stmt->bindValue(':email', $this->email, PDO::PARAM_STR); 
             $stmt->execute();           
     }
+
+    // public function addExpensesCategory()
+    // {        
+    //     $sql = 'INSERT INTO expenses_category_assigned_to_users (user_id, name, userLimit) SELECT u.id, e.name FROM expenses_category_default AS e, users AS u WHERE u.email = :email';
+                                                      
+    //         $db = static::getDB();
+    //         $stmt = $db->prepare($sql);                                                  
+    //         $stmt->bindValue(':email', $this->email, PDO::PARAM_STR);
+    //         $stmt->execute();           
+    // }
 
     public function addPaymentCategory()
     {      
